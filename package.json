@@ -1,0 +1,13 @@
+{
+  "name": "typing-rpg-coop",
+  "version": "1.0.0",
+  "description": "2-player cooperative Japanese romaji typing boss game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

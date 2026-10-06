@@ -58,7 +58,7 @@ const shortWords=[
  ["のどが渇いた", "nodogakawaita"],
  ["チョコ食べたい", "tyokotabetai"],
  ["パンを焼こう", "panwoyakou"],
- ["うどんにしよう", "udonnisiyou"],
+ ["うどんにしよう", "udonnnisiyou"],
  ["そばもいいね", "sobamoiine"],
  ["眠気が強い", "nemukegatuyoi"],
  ["帰りたい", "kaeritai"],

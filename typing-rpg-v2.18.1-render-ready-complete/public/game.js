@@ -1042,7 +1042,10 @@ window.__ultRushHit=(combo,crit)=>{
  const loading=document.getElementById('trLoading'),conn=document.getElementById('trConnection');
  const ct=document.getElementById('trConnectionTitle'),cx=document.getElementById('trConnectionText');
  const hideLoading=()=>loading?.classList.add('hidden');
- if(socket?.connected)hideLoading();
+ // Socket.IO can already be connected before this late UI hook is registered.
+ // Re-check after the current script finishes so CONNECTING never masks a live menu.
+ if(socket && socket.connected) hideLoading();
+ setTimeout(()=>{ if(socket && socket.connected) hideLoading(); },0);
  socket?.on('connect',()=>{
    hideLoading();
    if(conn&&!conn.classList.contains('hidden')){

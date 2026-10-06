@@ -1021,3 +1021,16 @@ body.ult-double-active .typingBox .focusCombo{
 body.ult-double-active .typingBox .focusCombo{
  top:-100px!important;
 }
+
+
+/* v2.18.2 — AUTO ULT HUD: remove obsolete manual ULT button overlap */
+#ultHud #ultButton{display:none!important}
+#ultHud .dualCastReady{
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%)!important;
+  margin:0!important;
+  white-space:nowrap!important;
+  z-index:3!important;
+}

@@ -1035,3 +1035,45 @@ window.__ultRushHit=(combo,crit)=>{
 };
 
 
+
+
+/* v2.19.0 — loading, reconnect notice, first-run tutorial */
+(()=>{
+ const loading=document.getElementById('trLoading'),conn=document.getElementById('trConnection');
+ const ct=document.getElementById('trConnectionTitle'),cx=document.getElementById('trConnectionText');
+ const hideLoading=()=>loading?.classList.add('hidden');
+ if(socket?.connected)hideLoading();
+ socket?.on('connect',()=>{
+   hideLoading();
+   if(conn&&!conn.classList.contains('hidden')){
+     if(ct)ct.textContent='再接続しました';
+     if(cx)cx.textContent='通信が復旧しました';
+     setTimeout(()=>conn.classList.add('hidden'),1100);
+   }
+ });
+ socket?.on('disconnect',()=>{
+   hideLoading(); if(conn)conn.classList.remove('hidden');
+   if(ct)ct.textContent='接続が切れました';
+   if(cx)cx.textContent='再接続しています...';
+ });
+ socket?.on('connect_error',()=>{
+   hideLoading(); if(conn)conn.classList.remove('hidden');
+   if(ct)ct.textContent='サーバーに接続できません';
+   if(cx)cx.textContent='自動で再接続を試しています...';
+ });
+ setTimeout(hideLoading,7000);
+
+ const tut=document.getElementById('trTutorial'),title=document.getElementById('trTutTitle'),body=document.getElementById('trTutText');
+ const dots=[...document.querySelectorAll('.trTutDots i')],next=document.getElementById('trTutNext'),skip=document.getElementById('trTutSkip');
+ const pages=[
+  ['TYPE RAIDへようこそ','表示されたローマ字をそのままタイプしてボスを攻撃します。'],
+  ['COMBOをつなげよう','正しく入力し続けるとCOMBOが上昇。ミスすると0に戻ります。'],
+  ['AUTO ULT','ULTゲージが100%になると自動発動。5秒間、タイピング攻撃が×2になります。'],
+  ['CO-OP RAID','2人プレイではLINK・REVIVE・TEAM HEALを使って協力してボスを倒そう！']
+ ]; let page=0;
+ const close=()=>{tut?.classList.add('hidden');try{localStorage.setItem('typeRaidTutorial219','1')}catch(e){}};
+ const draw=()=>{if(!title||!body)return;title.textContent=pages[page][0];body.textContent=pages[page][1];dots.forEach((d,i)=>d.classList.toggle('on',i===page));if(next)next.textContent=page===pages.length-1?'RAID開始':'次へ'};
+ next?.addEventListener('click',()=>{if(page>=pages.length-1)close();else{page++;draw()}});
+ skip?.addEventListener('click',close); draw();
+ try{if(!localStorage.getItem('typeRaidTutorial219'))setTimeout(()=>tut?.classList.remove('hidden'),350)}catch(e){}
+})();

@@ -1,0 +1,15 @@
+{
+  "name": "type-raid-2",
+  "version": "2.18.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "engines": {
+    "node": ">=20 <25"
+  }
+}

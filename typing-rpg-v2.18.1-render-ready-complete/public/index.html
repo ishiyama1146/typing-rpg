@@ -1,0 +1,193 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TYPE RAID 2.0</title><link rel="stylesheet" href="style.css"></head><body>
+<div id="v21Menu" class="v21Screen">
+  <div class="v21MenuCard">
+    <div class="v21Eyebrow">ONLINE TYPING RAID RPG</div>
+    <h1>TYPE <span>RAID</span> <em>2.18.1</em></h1>
+    <p class="v21Lead">文字を撃ち込み、ボスを倒せ。</p>
+    <div class="v21ModeGrid">
+      <button id="v21Solo" class="v21Mode solo"><b>SOLO RAID</b><small>1人で挑戦</small></button>
+      <button id="v21Coop" class="v21Mode coop"><b>CO-OP RAID</b><small>2人で共闘</small></button>
+    </div>
+    <div class="v21SubActions">
+      <button id="v21How">HOW TO PLAY</button>
+      <button id="v21Settings">SETTINGS</button>
+    </div>
+    <div id="v21MenuPanel" class="v21MenuPanel" hidden></div>
+  </div>
+</div>
+<div id="bossSelect" class="v21Screen bossSelectScreen" hidden>
+  <div class="bossSelectCard">
+    <button id="bossSelectBack" class="bossSelectBack" type="button">← メニューに戻る</button>
+    <div class="v21Eyebrow">SELECT RAID BOSS</div>
+    <h2>難易度を選択</h2>
+    <p class="bossSelectLead">ボスごとにHP・攻撃速度・問題の長さが変化します。</p>
+    <div class="bossChoices">
+      <button class="bossChoice easy" data-difficulty="easy">
+        <span class="bossIcon">◉</span><small>EASY</small><b>翠晶獣 リム</b>
+        <em>HP 4,200　攻撃：ゆっくり</em><i>短文中心 / 初心者向け</i>
+      </button>
+      <button class="bossChoice normal" data-difficulty="normal">
+        <span class="bossIcon">☠</span><small>NORMAL</small><b>深淵の魔王 アビス</b>
+        <em>HP 6,500　攻撃：標準</em><i>現在の標準バランス</i>
+      </button>
+      <button class="bossChoice hard" data-difficulty="hard">
+        <span class="bossIcon">◆</span><small>HARD</small><b>機装竜 ヴァルガ</b>
+        <em>HP 9,000　攻撃：高速</em><i>長文多め / 上級者向け</i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="v21Result" class="v21Screen" hidden>
+  <div class="v21ResultCard">
+    <div id="v21ResultDifficulty" class="v251ResultDifficulty">NORMAL RAID</div>
+    <div id="v21ResultTitle" class="v21ResultTitle">RAID CLEAR</div>
+    <div id="v251Rank" class="v251Rank">A</div>
+    <div id="v251Boss" class="v251Boss">深淵の魔王 アビス</div>
+    <div id="v251Record" class="v251Record" hidden>★ NEW RECORD!</div>
+    <div id="v21ResultStats" class="v21ResultStats"></div>
+    <div class="v21ResultActions">
+      
+<div id="rematchDifficulty" class="rematchDifficulty">
+  <small>次のCO-OP難易度</small>
+  <div class="rematchDiffBtns">
+    <button type="button" class="rematchDiff easy" data-diff="easy">EASY</button>
+    <button type="button" class="rematchDiff normal" data-diff="normal">NORMAL</button>
+    <button type="button" class="rematchDiff hard" data-diff="hard">HARD</button>
+  </div>
+</div>
+<button id="v21Replay">もう一度戦う</button>
+      <button id="v21BackMenu">メニューに戻る</button>
+    </div>
+    <div id="v21ReplayNote" class="v21ReplayNote"></div>
+  </div>
+</div>
+
+<section id="home" class="screen home hidden">
+  <div class="coopLobbyCard">
+    <button id="coopBackBtn" class="coopBackBtn" type="button">← メニューに戻る</button>
+    <div class="v21Eyebrow">2 PLAYER CO-OP TYPING RPG</div>
+    <div class="coopLobbyTitle">TYPE <b>RAID</b> <small>2.18.1</small></div>
+    <p class="coopLobbyLead">ROOMを作るか、4桁のコードで相方のROOMに参加。</p>
+
+    <label class="coopFieldLabel" for="name">PLAYER NAME</label>
+    <input id="name" class="coopNameInput" maxlength="12" placeholder="プレイヤー名">
+
+    <div class="coopChoiceGrid">
+      <div class="coopChoice createChoice">
+        <b>CREATE ROOM</b>
+        <span>新しいROOMを作って相方を待つ</span>
+        <div class="coopDifficulty">
+          <small>RAID DIFFICULTY</small>
+          <div class="coopDiffBtns">
+            <button type="button" class="coopDiff easy" data-diff="easy">EASY</button>
+            <button type="button" class="coopDiff normal active" data-diff="normal">NORMAL</button>
+            <button type="button" class="coopDiff hard" data-diff="hard">HARD</button>
+          </div>
+          <em id="coopDiffDesc">深淵の魔王 アビス / 標準2人RAID</em>
+        </div>
+        <button id="createBtn">ROOMを作る</button>
+      </div>
+      <div class="coopChoice joinChoice">
+        <b>JOIN ROOM</b>
+        <span>相方から届いた4桁コードを入力</span>
+        <input id="joinCode" maxlength="4" inputmode="numeric" placeholder="ROOM CODE">
+        <button id="joinBtn">参加する</button>
+      </div>
+    </div>
+
+    <div class="tip">日本語をローマ字で入力。2人のタイピングで魔王を倒せ。</div>
+  </div>
+</section>
+<section id="waiting" class="screen hidden"><div class="panel wait"><h1>ROOM <span id="waitCode"></span></h1><div id="waitDifficulty" class="waitDifficulty">NORMAL RAID</div><p>相方にROOM CODEを送ってね</p><button id="startBtn" disabled>2人でRAID開始</button></div>
+<button id="roomBackBtn" class="roomBackBtn" type="button">← メニューに戻る</button>
+</section>
+<main id="game" class="hidden"><div id="missFlashText" class="missFlashText">MISS</div>
+
+
+ <button id="battleExitBtn" class="battleExitBtn" type="button">✕ 戦闘を中断</button>
+ <button id="soloPauseBtn" class="soloPauseBtn" type="button">Ⅱ 一時停止</button>
+ <div id="pauseOverlay" class="pauseOverlay hidden">
+   <div class="pauseCard">
+     <div class="pauseEyebrow">SOLO RAID</div>
+     <div class="pauseTitle">PAUSED</div>
+     <div class="pauseSub">戦闘を一時停止中</div>
+     <button id="resumeBtn" class="resumeBtn" type="button">▶ 戦闘を再開</button>
+     <button id="pauseMenuBtn" class="pauseMenuBtn" type="button">メニューに戻る</button>
+   </div>
+ </div>
+ <header><div class="brand">TYPE <b>RAID</b> <small>2.18.1</small></div><div class="audio"><button id="soundBtn">🔊 ON</button><label>BGM <input id="bgmVol" type="range" min="0" max="1" step=".01" value=".01"></label><label>SE <input id="seVol" type="range" min="0" max="1" step=".01" value=".8"></label></div><div>ROOM <b id="roomCode"></b></div><button id="v21MenuBtn" class="v21MenuBtn">MENU</button><span id="v21ModeBadge" class="v21ModeBadge">CO-OP</span></header>
+ <section class="raidTop"><div class="playerCard blue"><div class="avatar blueAv">P1</div><div class="pbody"><div><b id="myName">PLAYER 1</b><span id="myHp">120/120</span></div><div class="bar hp"><i id="myBar"></i></div><small id="myStats"></small></div></div>
+ <div class="bossHud"><div><b id="bossName">☠ BOSS　深淵の魔王 アビス</b><span id="phase">PHASE 1</span></div><div class="bar bossbar"><i id="bossBar"></i></div><strong id="bossHp">12000 / 12000</strong></div>
+ <div class="playerCard pink"><div class="pbody"><div><b id="partnerName">PLAYER 2</b><span id="partnerHp">120/120</span></div><div class="bar hp"><i id="partnerBar"></i></div><small id="partnerStats"></small><div class="bar tiny"><i id="partnerTyping"></i></div></div><div class="avatar pinkAv">P2</div></div></section>
+ <section id="arena" class="arena"><div class="sky"></div><div class="ruins r1"></div><div class="ruins r2"></div><div class="bossWrap independentBoss" id="bossSprite">
+  <img class="indBoss indEasy" src="/assets/independent/boss_easy.png" alt="">
+  <img class="indBoss indNormal" src="/assets/independent/boss_normal.png" alt="">
+  <img class="indBoss indHard" src="/assets/independent/boss_hard.png" alt="">
+</div><div class="caster leftCaster"><img class="playerArt" src="/assets/players/player1.png" alt=""><div class="casterBody"></div><div class="handGlow"></div></div><div class="caster rightCaster"><img class="playerArt" src="/assets/players/player2.png" alt=""><div class="casterBody"></div><div class="handGlow"></div></div><div id="ultRushFx" class="ultRushFx" aria-hidden="true">
+ <div class="ultRushVignette"></div><div class="ultRushSpeed"></div>
+ <div class="ultRushBadge"><b>×2</b><span>OVERDRIVE</span><em id="ultRushTime">5.0</em></div>
+</div>
+<div id="ultHud" class="ultHud">
+  <div class="ultSide p1"><span>P1 ULT</span><div class="ultTrack"><i id="p1UltBar"></i></div><b id="p1UltText">0%</b></div>
+  <button id="ultButton" type="button" disabled>ULT</button>
+  <div id="dualCastReady" class="dualCastReady">DUAL CAST</div>
+  <div class="ultSide p2"><span>P2 ULT</span><div class="ultTrack"><i id="p2UltBar"></i></div><b id="p2UltText">0%</b></div>
+</div>
+<div id="projectiles"></div><div id="damageLayer"></div><div id="message"></div>
+  <div class="typingBox"><div id="focusCombo" class="focusCombo"><span>COMBO</span><b id="focusComboNum">0</b></div><h2 id="jpWord">魔法で攻撃しよう</h2><div id="romaWord">mahoudekougeki</div><div class="typingProgress"><i id="typingBar"></i></div><div id="reviveHint" class="revive hidden">相方を救え！ 20文字入力でREVIVE</div></div>
+ </section>
+ <section class="coop"><div class="coopPanel partner"><b>PARTNER</b><span>相方の入力状況</span><div class="bar"><i id="partnerTyping2"></i></div></div><div id="linkPanel" class="coopPanel link"><b>⚡ LINK CHANCE</b><span id="linkText">2人で続けて打ち切ると400 DAMAGE</span><em id="linkTimer">READY</em></div><div class="coopPanel break"><b>🔥 BOSS BREAK</b><span id="breakText">32秒ごとに発生</span><div class="bar"><i id="breakBar"></i></div></div></section>
+ <section class="bottom"><div class="log"><b>バトルログ</b><div id="battleLog"></div></div><div class="controls"><button id="healBtn">♥ TEAM HEAL <small>35 HIT</small></button><div>問題タイプ <b>ミックス</b><br><small>単語40% / 文章40% / 長文20%</small></div></div><div class="status"><b>RAID STATUS</b><div>文字弾 <span>ON</span></div><div>協力攻撃 <span>ON</span></div><div>ボスモーション <span>ON</span></div></div></section>
+</main>
+<section id="result" class="screen hidden"><div class="panel result">
+<h1 id="resultTitle"></h1>
+<div id="teamRank" class="teamRank">B</div>
+<div id="teamResultLabel" class="teamResultLabel">TEAM RESULT</div>
+<div id="coopResultGrid" class="coopResultGrid">
+  <div class="coopPlayerResult p1"><b>PLAYER 1</b><strong id="resultP1Name">P1</strong><div id="resultP1Stats"></div></div>
+  <div class="coopTeamResult"><b>TEAM</b><strong id="resultTeamDamage">0 DMG</strong><div id="resultTeamStats"></div></div>
+  <div class="coopPlayerResult p2"><b>PLAYER 2</b><strong id="resultP2Name">P2</strong><div id="resultP2Stats"></div></div>
+</div>
+<p id="resultStats"></p>
+<div id="coopResultActions" hidden>
+  <div class="legacyRematchDifficulty">
+    <small>次のRAID難易度</small>
+    <div class="legacyRematchBtns">
+      <button type="button" data-rematch-diff="easy">EASY</button>
+      <button type="button" data-rematch-diff="normal">NORMAL</button>
+      <button type="button" data-rematch-diff="hard">HARD</button>
+    </div>
+  </div>
+  <button id="coopRematchBtn" type="button">同じROOMで再挑戦</button>
+  <div id="coopRematchStatus"></div>
+</div>
+<button id="legacyTitleBtn" type="button" onclick="location.reload()">タイトルへ</button>
+</div></section>
+<script src="/socket.io/socket.io.js"></script><script src="game.js"></script><div id="v260PhaseFx" class="v260PhaseFx" hidden>
+  <div><span>BOSS AWAKENING</span><b>PHASE 2</b></div>
+</div>
+
+<div id="v262Curse" class="v262Curse" hidden>
+ <div class="v262CurseBox">
+  <small>WARNING / ABYSS CURSE</small>
+  <b>深淵の呪い</b>
+  <div id="v262CurseJp" class="v262CurseJp">闇を払え</div>
+  <div id="v262CurseRoma" class="v262CurseRoma">yamiwoharae</div>
+  <div class="v262CurseTrack"><i id="v262CurseBar"></i></div>
+  <em>6秒以内に入力せよ</em>
+ </div>
+</div>
+
+<div id="v263OD" class="v263OD" hidden>
+ <div class="v263ODBox">
+  <small>⚠ WARNING / MACHINE DRAGON</small>
+  <b id="v263ODPhase">OVERDRIVE</b>
+  <div id="v263ODJp" class="v263ODJp">限界を超えろ</div>
+  <div id="v263ODRoma" class="v263ODRoma">genkaiwokoero</div>
+  <div class="v263ODTrack"><i id="v263ODBar"></i></div>
+  <em><strong id="v263ODLimit">5.5</strong>秒以内に迎撃せよ</em>
+ </div>
+</div>
+
+</body></html>

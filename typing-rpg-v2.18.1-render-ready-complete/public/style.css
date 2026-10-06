@@ -1,0 +1,1023 @@
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#020611;color:#eef6ff;font-family:Inter,"Noto Sans JP",system-ui,sans-serif}button,input{font:inherit}.hidden{display:none!important}.screen{min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,#38105c,#050817 52%,#01030a)}.home{text-align:center}.logo{font-size:58px;font-weight:1000;letter-spacing:8px;text-shadow:0 0 25px #159cff}.logo b{color:#ff3ebd}.logo small{font-size:18px;color:#b69cff}.home p{letter-spacing:5px;color:#8ca5c5}.home input{background:#07172b;border:1px solid #2874b7;color:white;padding:14px;border-radius:8px}.homeBtns{display:flex;gap:10px;justify-content:center;margin:22px}.home button,.wait button,.result button{border:0;border-radius:8px;padding:14px 22px;color:white;font-weight:900;background:linear-gradient(135deg,#087cff,#d824df);box-shadow:0 0 22px #8a2dff66}.tip{color:#8495ae}.panel{padding:35px;background:#061329e8;border:1px solid #2969a4;border-radius:16px;text-align:center;box-shadow:0 0 50px #4e1d9c66}main{max-width:1920px;margin:auto;min-height:100vh;background:#020611}header{height:54px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 20px;background:#031020;border-bottom:1px solid #17476e}.brand{font-weight:1000;letter-spacing:4px}.brand b{color:#ff3dbd}.brand small{color:#a27cff}.audio{display:flex;align-items:center;gap:14px;font-size:12px}.audio label{display:flex;align-items:center;gap:6px}.audio input{width:95px}.audio button{background:#9b39e6;border:0;color:white;padding:8px 12px;border-radius:8px}header>div:last-child{text-align:right}.raidTop{height:126px;display:grid;grid-template-columns:320px 1fr 320px;gap:18px;padding:10px 18px;position:relative;z-index:20;background:linear-gradient(#061020,#020611)}.playerCard{display:flex;gap:10px;padding:8px;background:#041327e8;border:2px solid;border-radius:12px}.playerCard.blue{border-color:#169fff;box-shadow:0 0 20px #0d8cff55}.playerCard.pink{border-color:#ff3cb9;box-shadow:0 0 20px #ff29ad55}.avatar{width:82px;display:grid;place-items:center;font-size:30px;font-weight:1000;border-radius:8px;background:radial-gradient(circle,#1b4779,#06152c)}.pinkAv{background:radial-gradient(circle,#7d1c61,#250824)}.pbody{flex:1}.pbody>div:first-child{display:flex;justify-content:space-between;font-size:18px}.bar{height:12px;background:#172136;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;width:0;transition:width .15s}.blue .hp i{background:linear-gradient(90deg,#10d6a7,#58e9c9)}.pink .hp i{background:linear-gradient(90deg,#ffd02d,#ff7f37)}.pbody small{display:block;margin:8px 0;color:#aebcd0}.tiny{height:8px}.tiny i,.partner .bar i{background:#ff46ca}.bossHud{text-align:center;padding:4px 20px}.bossHud>div:first-child{display:flex;justify-content:space-between;align-items:center;color:#ff5fc8;font-size:20px}.bossHud #phase{padding:5px 10px;border:1px solid #b04bff;border-radius:8px;font-size:13px}.bossbar{height:28px;border:2px solid #ff35aa;background:#0c1322;margin-top:8px}.bossbar i{background:linear-gradient(90deg,#ff285f,#ff20a9);box-shadow:0 0 20px #ff2099}.bossHud strong{position:relative;top:-24px}.arena{height:565px;position:relative;overflow:hidden;border-top:1px solid #552c83;border-bottom:1px solid #552c83;background:#07041a}.sky{position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,#a615c866,transparent 26%),radial-gradient(circle at 18% 38%,#0757a955,transparent 30%),radial-gradient(circle at 82% 40%,#b2097e55,transparent 30%),linear-gradient(#16072d,#090c22 70%,#030611)}.sky:after{content:"";position:absolute;inset:0;background-image:radial-gradient(#f06cff 1px,transparent 1px),radial-gradient(#3cbcff 1px,transparent 1px);background-size:80px 80px,110px 110px;animation:stars 12s linear infinite}.ruins{position:absolute;bottom:0;width:38%;height:55%;opacity:.65;background:linear-gradient(90deg,transparent 5%,#111630 6% 12%,transparent 13% 18%,#151633 19% 26%,transparent 27% 34%,#10142d 35% 44%,transparent 45% 51%,#181532 52% 60%,transparent 61%);clip-path:polygon(0 100%,0 45%,8% 45%,8% 20%,13% 20%,13% 55%,20% 55%,20% 5%,26% 5%,26% 48%,34% 48%,34% 28%,41% 28%,41% 62%,50% 62%,50% 18%,57% 18%,57% 52%,65% 52%,65% 0,72% 0,72% 58%,80% 58%,80% 32%,87% 32%,87% 64%,100% 64%,100% 100%)}.r1{left:0}.r2{right:0;transform:none}.bossWrap{position:absolute;z-index:5;left:50%;top:42%;width:390px;height:400px;transform:translate(-50%,-50%);animation:bossIdle 2.1s ease-in-out infinite;filter:drop-shadow(0 0 30px #ff26d1)}.bossHead{position:absolute;left:120px;top:42px;width:150px;height:125px;border-radius:45% 45% 55% 55%;background:radial-gradient(circle at 50% 60%,#8d1d99,#1a071e 60%,#05030c);border:5px solid #9f27c6;z-index:4;box-shadow:inset 0 0 30px #f42bd1,0 0 35px #e72acb}.bossHead i{position:absolute;top:53px;width:30px;height:12px;background:#ff3fd8;box-shadow:0 0 18px #fff,0 0 35px #ff1fce;transform:rotate(12deg)}.bossHead i:first-child{left:30px}.bossHead i:last-child{right:30px;transform:rotate(-12deg)}.bossBody{position:absolute;left:90px;top:140px;width:210px;height:240px;background:linear-gradient(90deg,#12051d,#5e126e 48%,#14051e);clip-path:polygon(50% 0,78% 15%,100% 55%,82% 100%,18% 100%,0 55%,22% 15%);border-radius:30%;box-shadow:inset 0 0 50px #f01ac466}.core{position:absolute;left:50%;top:42%;width:75px;height:75px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#fff 0 7%,#ff67e4 10%,#ff16c8 25%,#8c1dc6 45%,transparent 70%);box-shadow:0 0 35px #ff2bd2,0 0 85px #d123ff;animation:core 0.8s alternate infinite}.horn{position:absolute;top:4px;width:120px;height:120px;border-top:20px solid #8d20ba;border-radius:90% 0 0 0}.h1{left:65px;transform:rotate(-24deg)}.h2{right:65px;transform:none rotate(-24deg)}.wing{position:absolute;top:125px;width:210px;height:190px;background:linear-gradient(135deg,#8e1bb9,#16051f 65%);clip-path:polygon(100% 0,80% 25%,100% 45%,65% 40%,78% 72%,43% 58%,48% 100%,0 50%);opacity:.95}.wing.left{left:-125px}.wing.right{right:-125px;transform:none}.tentacles{position:absolute;left:50%;top:245px;width:500px;height:180px;transform:translateX(-50%);border-radius:50%;border-bottom:22px solid #8f20b4;box-shadow:0 25px 35px #e626cc55}.caster{position:absolute;z-index:7;bottom:15px;width:260px;height:270px}.leftCaster{left:3%}.rightCaster{right:3%;transform:none}.casterBody{position:absolute;bottom:0;width:170px;height:235px;background:linear-gradient(135deg,#07172c,#0a4f91 50%,#020713);clip-path:polygon(45% 0,65% 12%,72% 35%,100% 55%,72% 62%,85% 100%,0 100%,25% 60%,18% 25%);filter:drop-shadow(0 0 18px #148cff)}.rightCaster .casterBody{background:linear-gradient(135deg,#25051e,#9b176e 50%,#0b0209);filter:drop-shadow(0 0 18px #ff2cb7)}.handGlow{position:absolute;left:150px;top:100px;width:65px;height:65px;border-radius:50%;background:#7de5ff;box-shadow:0 0 20px #fff,0 0 60px #008cff}.rightCaster .handGlow{background:#ff77db;box-shadow:0 0 20px #fff,0 0 60px #ff008f}.typingBox{position:absolute;z-index:30;left:50%;bottom:14px;transform:translateX(-50%);width:min(760px,52vw);padding:12px 24px 10px;text-align:center;background:#031429ed;border:2px solid #168dff;border-radius:12px;box-shadow:0 0 25px #0d74df77}.typingBox h2{margin:0 0 4px;font-size:24px}.typingBox #romaWord{font-size:29px;letter-spacing:2px;color:#98a4b5;white-space:nowrap;overflow:hidden}.done{color:#28e2b4}.cursor{background:#8a3cff;color:white}.typingProgress{height:7px;background:#13223a;border-radius:10px;margin-top:7px;overflow:hidden}.typingProgress i{display:block;height:100%;background:linear-gradient(90deg,#45e4d0,#198fff)}.revive{color:#ffdf61;font-weight:900}.coop{display:grid;grid-template-columns:1fr 1.05fr 1.05fr;gap:8px;padding:8px 18px;background:#020611}.coopPanel{min-height:92px;padding:12px 16px;background:#041326;border:1px solid;border-radius:8px;position:relative}.coopPanel b,.coopPanel span{display:block}.partner{border-color:#ff38bd}.partner b{color:#ff65cc}.link{border-color:#9d4cff}.link b{color:#d68dff}.break{border-color:#f0a02e}.break b{color:#ffc358}.coopPanel em{position:absolute;right:15px;top:24px;font-style:normal;font-size:20px}.coopPanel .bar{margin-top:10px;height:9px}.break .bar i{background:#ffc528}.bottom{display:grid;grid-template-columns:1.2fr .9fr .8fr;gap:8px;padding:0 18px 12px}.bottom>div{min-height:110px;padding:12px;background:#041326;border:1px solid #174b76;border-radius:8px}.log #battleLog{font-size:12px;color:#b8c8db;max-height:75px;overflow:hidden}.log #battleLog div{margin-top:3px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}.controls button{height:58px;border:1px solid #ff3da8;background:#42113c;color:white;border-radius:8px;font-weight:900}.controls button small{display:block}.status div{display:flex;justify-content:space-between;margin-top:8px}.status span{color:#2fe1ae}.projectile{position:absolute;z-index:20;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:28px;font-weight:1000;color:white;transition:transform .24s cubic-bezier(.1,.8,.2,1);pointer-events:none}.projectile.me{background:#087fff;box-shadow:0 0 16px #fff,0 0 45px #008cff}.projectile.partnerShot{background:#ff28ad;box-shadow:0 0 16px #fff,0 0 45px #ff008f}.projectile.crit{background:#ffae17;box-shadow:0 0 20px #fff,0 0 60px #ff8c00}.damage{position:absolute;z-index:25;font-size:22px;font-weight:1000;animation:dmg .7s forwards;color:#fff}.damage.crit{color:#ffd345;font-size:30px}.bossWrap.hit{animation:hit .2s!important}.bossWrap.critHit{animation:crit .32s!important}.bossWrap.attack{animation:attack .45s!important}.bossWrap.breakStun{animation:breakStun .8s!important}.bossWrap.rage{animation-duration:1.1s;filter:drop-shadow(0 0 45px #ff2b55) saturate(1.5)}.bossWrap.dead{animation:death 1.7s forwards!important}.arena.phase2 .sky{filter:hue-rotate(18deg) saturate(1.4)}#message{position:absolute;z-index:40;top:20px;left:50%;transform:translateX(-50%);font-size:26px;font-weight:1000;text-shadow:0 0 15px #000}.good{color:#62ffcc}.bad{color:#ff526e}.linkAttack{color:#ffe45a;font-size:38px!important}@keyframes bossIdle{0%,100%{transform:translate(-50%,-50%) translateY(8px) scale(.98)}50%{transform:translate(-50%,-50%) translateY(-16px) scale(1.035)}}@keyframes core{to{transform:translate(-50%,-50%) scale(1.35);filter:brightness(1.7)}}@keyframes hit{30%{transform:translate(-45%,-50%) rotate(3deg);filter:brightness(2.4)}70%{transform:translate(-55%,-50%) rotate(-3deg)}}@keyframes crit{40%{transform:translate(-50%,-50%) scale(1.14);filter:brightness(3) drop-shadow(0 0 70px #ffd32e)}}@keyframes attack{45%{transform:translate(-50%,-42%) scale(1.18);filter:brightness(1.5)}}@keyframes breakStun{20%{transform:translate(-42%,-49%) rotate(5deg)}40%{transform:translate(-58%,-51%) rotate(-5deg)}60%{transform:translate(-45%,-49%) rotate(3deg)}80%{transform:translate(-55%,-51%) rotate(-2deg)}}@keyframes death{35%{transform:translate(-50%,-50%) scale(1.2);filter:brightness(3)}100%{transform:translate(-50%,-70%) scale(.1);opacity:0;filter:blur(15px)}}@keyframes dmg{to{transform:translateY(-70px) scale(1.35);opacity:0}}@keyframes stars{to{background-position:0 160px,0 220px}}@media(max-width:1100px){.raidTop{grid-template-columns:250px 1fr 250px}.avatar{display:none}.arena{height:500px}.bossWrap{transform:translate(-50%,-50%) scale(.85)}.typingBox{width:70vw}.coop,.bottom{grid-template-columns:1fr}.bottom{padding-bottom:30px}}
+
+/* TYPE RAID 2.1 — menu, solo, result flow */
+.v21Screen{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#35105dcc,#020713 68%);backdrop-filter:blur(8px);padding:24px}
+.v21Screen[hidden]{display:none}
+.v21MenuCard,.v21ResultCard{width:min(760px,92vw);padding:42px;border:1px solid #39486e;background:#061326f2;box-shadow:0 0 60px #0009;text-align:center}
+.v21Eyebrow{font-size:12px;letter-spacing:.32em;color:#8aa0c4}
+.v21MenuCard h1{font-size:56px;letter-spacing:.12em;margin:10px 0 4px}.v21MenuCard h1 span{color:#ff3ab7}.v21MenuCard h1 em{font-size:18px;color:#9a62ff;font-style:normal}
+.v21Lead{color:#9db0cc;margin-bottom:28px}
+.v21ModeGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.v21Mode{min-height:128px;border:1px solid #41597f;background:#0a1a31;color:white;cursor:pointer;transition:.18s}.v21Mode b{display:block;font-size:25px}.v21Mode small{display:block;margin-top:8px;color:#a9b9cf}
+.v21Mode.solo{border-color:#168cff}.v21Mode.coop{border-color:#ff39b8}.v21Mode:hover{transform:translateY(-3px);filter:brightness(1.2)}
+.v21SubActions{display:flex;justify-content:center;gap:10px;margin-top:14px}.v21SubActions button,.v21ResultActions button,.v21MenuBtn{background:#0a1a31;border:1px solid #41597f;color:#fff;padding:11px 18px;cursor:pointer}
+.v21MenuPanel{margin-top:16px;padding:16px;text-align:left;background:#081a31;border:1px solid #263f64;color:#bdc9da}.v21MenuPanel b{color:white}.v21MenuPanel p{margin:8px 0 0;line-height:1.65}
+.v21ResultTitle{font-size:46px;font-weight:1000;letter-spacing:.08em}.v21ResultTitle.win{color:#5df3cf}.v21ResultTitle.lose{color:#ff5b75}
+.v21ResultStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0}.v21ResultStats div{padding:18px;background:#081a31;border:1px solid #263f64}.v21ResultStats b{display:block;font-size:28px}.v21ResultStats small{color:#8fa5c5}
+.v21ResultActions{display:flex;justify-content:center;gap:12px}.v21ResultActions button:first-child{border-color:#ff39b8;background:#4d1042}
+.v21ReplayNote{margin-top:14px;color:#ffd45c}.v21MenuBtn{margin-left:10px;padding:6px 10px;font-size:11px}.v21ModeBadge{margin-left:8px;border:1px solid #8e4eff;color:#c9a8ff;padding:4px 8px;font-size:10px}
+@media(max-width:650px){.v21MenuCard{padding:25px 18px}.v21MenuCard h1{font-size:35px}.v21ModeGrid{grid-template-columns:1fr}.v21ResultStats{grid-template-columns:repeat(2,1fr)}}
+
+
+/* TYPE RAID 2.1.2 — SOLO HUD cleanup
+   SOLOではP2/相方関連を消し、中央HUDを広げる。
+   CO-OPは従来表示のまま。 */
+
+/* 右上の2Pカード */
+body.solo-mode #p2Card,
+body.solo-mode #player2Card,
+body.solo-mode .player2-card,
+body.solo-mode .p2-card,
+body.solo-mode .player-card.p2,
+body.solo-mode .player-card.right {
+  display:none !important;
+}
+
+/* 右側のピンクプレイヤー */
+body.solo-mode #player2Sprite,
+body.solo-mode #p2Sprite,
+body.solo-mode .player2Sprite,
+body.solo-mode .player2-sprite,
+body.solo-mode .fighter.p2,
+body.solo-mode .player-right {
+  display:none !important;
+}
+
+/* 下部PARTNERパネル */
+body.solo-mode #partnerPanel,
+body.solo-mode .partner-panel,
+body.solo-mode .partnerBox,
+body.solo-mode .partner-box {
+  display:none !important;
+}
+
+/* 実際の2.0 DOMでは partnerName を含むカードを :has で確実に隠す */
+body.solo-mode *:has(> #partnerName) {
+  display:none !important;
+}
+
+/* P2関連テキストを含むカードの残骸も消す */
+body.solo-mode #partnerName,
+body.solo-mode #partnerHp,
+body.solo-mode #partnerStats,
+body.solo-mode #partnerBar,
+body.solo-mode #partnerTyping,
+body.solo-mode #partnerTyping2 {
+  display:none !important;
+}
+
+/* 下段のLINK/BREAKを2分割で広く */
+body.solo-mode .coop-row,
+body.solo-mode .team-row,
+body.solo-mode .raid-actions {
+  grid-template-columns:1fr 1fr !important;
+}
+
+/* SOLO時は右側が空いた分、ボスHPを自然に広く見せる */
+body.solo-mode .boss-hud,
+body.solo-mode .bossBarWrap {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* SOLO表示用 */
+body.solo-mode #v21ModeBadge {
+  border-color:#168cff;
+  color:#7fc7ff;
+}
+
+/* TYPE RAID 2.1.3 — exact SOLO cleanup using actual DOM */
+body.solo-mode .raidTop > .playerCard.pink {
+  display:none !important;
+}
+body.solo-mode .arena > .rightCaster {
+  display:none !important;
+}
+body.solo-mode .coop > .coopPanel.partner {
+  display:none !important;
+}
+
+/* Reflow the remaining SOLO HUD instead of leaving empty P2/PARTNER spaces */
+body.solo-mode .raidTop {
+  grid-template-columns: 290px 1fr !important;
+}
+body.solo-mode .bossHud {
+  grid-column: 2 !important;
+}
+body.solo-mode .coop {
+  grid-template-columns: 1fr 1fr !important;
+}
+body.solo-mode .coop > .coopPanel.link,
+body.solo-mode .coop > .coopPanel.break {
+  width:auto !important;
+}
+
+/* SOLO is one caster only, so give the boss/typing area a cleaner composition */
+body.solo-mode .leftCaster {
+  left:4% !important;
+}
+body.solo-mode .typingBox {
+  left:50% !important;
+}
+
+/* TYPE RAID 2.3 — escalating combo feedback */
+body.combo-hot .typingBox{box-shadow:0 0 28px #8e4eff55, inset 0 0 22px #8e4eff18}
+body.combo-hot #typingBar{filter:brightness(1.25)}
+body.combo-fever .typingBox{animation:feverPulse .55s ease-in-out infinite alternate;box-shadow:0 0 42px #ff39b877,0 0 80px #8e4eff33}
+body.combo-fever #bossSprite{filter:drop-shadow(0 0 22px #ff39b8) drop-shadow(0 0 40px #8e4eff)}
+.arena.comboBurst{animation:comboBurst .42s ease-out}
+@keyframes comboBurst{0%{filter:brightness(1)}25%{filter:brightness(1.55)}100%{filter:brightness(1)}}
+@keyframes feverPulse{from{transform:translateX(-50%) scale(1)}to{transform:translateX(-50%) scale(1.018)}}
+@media (prefers-reduced-motion:reduce){body.combo-fever .typingBox,.arena.comboBurst{animation:none!important}}
+
+
+/* TYPE RAID 2.4.1 — CO-OP lobby polish */
+#coopBackBtn.coopBackBtn{
+  position:absolute;
+  top:24px;
+  left:28px;
+  min-width:170px;
+  height:46px;
+  padding:0 18px;
+  border:1px solid #385170;
+  border-radius:6px;
+  background:#0b1b31;
+  color:#dce8ff;
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:.04em;
+  cursor:pointer;
+  transition:.18s ease;
+  z-index:20;
+}
+#coopBackBtn.coopBackBtn:hover{
+  border-color:#269cff;
+  box-shadow:0 0 18px #168cff44;
+  transform:translateY(-1px);
+}
+
+/* The co-op entry screen gets the same framed/card feeling as the main menu. */
+body:not(.solo-mode) #home{
+  box-sizing:border-box;
+}
+#home .coopLobbyCard{
+  width:min(880px,calc(100vw - 48px));
+  margin:auto;
+}
+
+/* Normalize the visible form area even if the original lobby uses absolute spacing. */
+#home input{
+  border-radius:5px;
+}
+@media (max-width:700px){
+  #coopBackBtn.coopBackBtn{top:14px;left:14px;min-width:145px;height:42px;font-size:13px}
+}
+
+/* TYPE RAID 2.4.2 — rebuilt CO-OP lobby */
+#home.home{
+  position:fixed!important; inset:0!important; z-index:9998!important;
+  display:grid!important; place-items:center!important;
+  min-height:100vh!important; padding:24px!important;
+  background:radial-gradient(circle at 50% 35%,#35105dcc,#020713 68%)!important;
+}
+#home.home.hidden{display:none!important}
+#home .coopLobbyCard{
+  position:relative;
+  width:min(900px,94vw)!important;
+  margin:0!important;
+  padding:42px!important;
+  border:1px solid #39486e!important;
+  background:#061326f2!important;
+  box-shadow:0 0 60px #0009!important;
+  text-align:center!important;
+}
+#home .coopBackBtn{
+  position:absolute!important; top:18px!important; left:18px!important;
+  height:38px!important; min-width:0!important; padding:0 13px!important;
+  border:1px solid #41597f!important; border-radius:3px!important;
+  background:#0a1a31!important; color:#dce8ff!important;
+  font-size:12px!important; font-weight:800!important; cursor:pointer!important;
+}
+#home .coopBackBtn:hover{border-color:#168cff!important;filter:brightness(1.2);transform:none!important}
+#home .v21Eyebrow{margin-top:16px}
+#home .coopLobbyTitle{
+  margin:10px 0 4px; color:#eef6ff; font-size:48px; font-weight:900;
+  letter-spacing:.12em; line-height:1.15;
+}
+#home .coopLobbyTitle b{color:#ff3ab7}
+#home .coopLobbyTitle small{font-size:16px;color:#9a62ff;letter-spacing:.12em}
+#home .coopLobbyLead{margin:8px 0 28px;color:#9db0cc;font-size:15px;letter-spacing:0}
+#home .coopFieldLabel{
+  display:block; width:min(520px,100%); margin:0 auto 7px;
+  color:#8aa0c4; text-align:left; font-size:11px; font-weight:900; letter-spacing:.18em;
+}
+#home .coopNameInput{
+  display:block; width:min(520px,100%)!important; height:52px!important;
+  margin:0 auto 20px!important; padding:0 16px!important;
+  border:1px solid #168cff!important; border-radius:3px!important;
+  background:#081a31!important; color:white!important; font-size:16px!important;
+  outline:none!important;
+}
+#home .coopNameInput:focus{box-shadow:0 0 20px #168cff33!important}
+#home .coopChoiceGrid{
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  width:100%; margin-top:6px;
+}
+#home .coopChoice{
+  min-height:185px; padding:22px;
+  background:#0a1a31; border:1px solid #41597f; text-align:left;
+}
+#home .createChoice{border-color:#168cff}
+#home .joinChoice{border-color:#ff39b8}
+#home .coopChoice>b{display:block;color:#fff;font-size:21px}
+#home .coopChoice>span{display:block;margin:6px 0 18px;color:#9db0cc;font-size:13px}
+#home .coopChoice button{
+  height:48px; border-radius:3px; color:#fff; font-size:15px; font-weight:900; cursor:pointer;
+}
+#home .createChoice button{
+  width:100%; border:1px solid #168cff;
+  background:linear-gradient(100deg,#187cff,#b72cf4);
+}
+#home .joinChoice{display:grid;grid-template-columns:1fr 118px;grid-template-rows:auto auto 48px;column-gap:8px}
+#home .joinChoice>b,#home .joinChoice>span{grid-column:1/-1}
+#home .joinChoice #joinCode{
+  width:100%!important;height:48px!important;margin:0!important;padding:0 14px!important;
+  border:1px solid #41597f!important;border-radius:3px!important;
+  background:#07172b!important;color:#fff!important;font-size:15px!important;
+}
+#home .joinChoice #joinBtn{
+  width:118px!important;border:1px solid #ff39b8!important;
+  background:linear-gradient(100deg,#8153ff,#d326c6)!important;
+}
+#home .tip{
+  position:static!important; margin-top:20px!important; padding-top:15px!important;
+  border-top:1px solid #263f64; color:#7f94b6!important; font-size:12px!important;
+}
+@media(max-width:700px){
+ #home .coopLobbyCard{padding:58px 18px 24px!important}
+ #home .coopLobbyTitle{font-size:34px}
+ #home .coopChoiceGrid{grid-template-columns:1fr}
+}
+
+/* TYPE RAID 2.4.3 — waiting-room back button */
+#roomBackBtn.roomBackBtn{
+ position:absolute!important;top:22px!important;left:24px!important;
+ height:42px!important;padding:0 15px!important;
+ border:1px solid #41597f!important;border-radius:4px!important;
+ background:#0a1a31!important;color:#dce8ff!important;
+ font-size:13px!important;font-weight:800!important;letter-spacing:.03em!important;
+ cursor:pointer!important;z-index:30!important;transition:.18s ease!important;
+}
+#roomBackBtn.roomBackBtn:hover{
+ border-color:#168cff!important;box-shadow:0 0 18px #168cff44!important;
+ transform:translateY(-1px)!important;
+}
+#waiting{position:relative!important}
+@media(max-width:700px){
+ #roomBackBtn.roomBackBtn{top:14px!important;left:14px!important;height:38px!important;font-size:12px!important}
+}
+
+
+/* TYPE RAID 2.4.4 — MAIN MENU mode-card alignment */
+#v21Menu .v21Modes{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:18px!important;
+  align-items:stretch!important;
+}
+#v21Menu .v21Mode{
+  min-width:0!important;
+  min-height:158px!important;
+  padding:24px 22px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  box-sizing:border-box!important;
+}
+#v21Menu .v21Mode > div,
+#v21Menu .v21Mode > span,
+#v21Menu .v21Mode > b,
+#v21Menu .v21Mode > strong{
+  width:100%!important;
+  text-align:center!important;
+}
+#v21Menu .v21ModeTitle{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  font-size:28px!important;
+  line-height:1.15!important;
+  font-weight:900!important;
+  white-space:nowrap!important;
+  word-break:keep-all!important;
+}
+#v21Menu .v21ModeSub{
+  display:block!important;
+  width:100%!important;
+  margin:12px 0 0!important;
+  font-size:15px!important;
+  line-height:1.2!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
+/* Existing markup uses h3/p in some builds, so force those too. */
+#v21Menu .v21Mode h3{
+  margin:0!important;
+  width:100%!important;
+  font-size:28px!important;
+  line-height:1.15!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
+#v21Menu .v21Mode p{
+  margin:12px 0 0!important;
+  width:100%!important;
+  text-align:center!important;
+  white-space:nowrap!important;
+}
+@media(max-width:700px){
+ #v21Menu .v21Modes{grid-template-columns:1fr!important}
+ #v21Menu .v21Mode{min-height:125px!important}
+}
+
+/* TYPE RAID 2.4.5 — waiting-room back button position */
+#roomBackBtn.roomBackBtn{
+  top:22px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+}
+#roomBackBtn.roomBackBtn:hover{
+  transform:translateX(-50%) translateY(-1px)!important;
+}
+@media(max-width:700px){
+  #roomBackBtn.roomBackBtn{
+    top:14px!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+  }
+}
+
+/* TYPE RAID 2.4.8 — always-visible battle exit */
+#game{position:relative!important}
+#battleExitBtn.battleExitBtn{
+ position:fixed!important;
+ top:78px!important;
+ right:18px!important;
+ z-index:99999!important;
+ display:block!important;
+ visibility:visible!important;
+ opacity:.86!important;
+ padding:10px 14px!important;
+ border:1px solid #ff4b93!important;
+ border-radius:5px!important;
+ background:#091426ee!important;
+ color:#fff!important;
+ font-size:12px!important;
+ font-weight:900!important;
+ letter-spacing:.03em!important;
+ cursor:pointer!important;
+ box-shadow:0 0 16px #ff3b8d22!important;
+}
+#battleExitBtn.battleExitBtn:hover{
+ opacity:1!important;
+ background:#281127!important;
+ box-shadow:0 0 22px #ff3b8d55!important;
+}
+#game.hidden #battleExitBtn{display:none!important}
+
+/* TYPE RAID 2.4.9 — SOLO pause */
+#soloPauseBtn.soloPauseBtn{
+ position:fixed!important;top:78px!important;right:160px!important;z-index:99999!important;
+ display:none;padding:10px 14px!important;border:1px solid #6b7fa8!important;
+ border-radius:5px!important;background:#091426ee!important;color:#fff!important;
+ font-size:12px!important;font-weight:900!important;cursor:pointer!important;
+}
+body.solo-mode #soloPauseBtn{display:block!important}
+#game.hidden #soloPauseBtn{display:none!important}
+.pauseOverlay{
+ position:fixed;inset:0;z-index:100000;display:grid;place-items:center;
+ background:#020713cc;backdrop-filter:blur(8px);
+}
+.pauseOverlay.hidden{display:none!important}
+.pauseCard{
+ width:min(430px,90vw);padding:38px;border:1px solid #53627e;
+ background:#071426f5;text-align:center;box-shadow:0 0 60px #000b;
+}
+.pauseEyebrow{font-size:11px;font-weight:900;letter-spacing:.24em;color:#8e9db8}
+.pauseTitle{margin-top:8px;font-size:48px;font-weight:1000;letter-spacing:.12em;color:#fff}
+.pauseSub{margin:6px 0 26px;color:#8fa1bf}
+.pauseCard button{display:block;width:100%;height:50px;margin-top:10px;border-radius:4px;font-weight:900;cursor:pointer}
+.resumeBtn{border:1px solid #168cff;background:linear-gradient(100deg,#187cff,#9c32f2);color:#fff}
+.pauseMenuBtn{border:1px solid #53627e;background:#0a1a31;color:#dce8ff}
+body.solo-paused #battleExitBtn{pointer-events:none;opacity:.25!important}
+body.solo-paused #soloPauseBtn{display:none!important}
+
+/* TYPE RAID 2.5.0 — SOLO BOSS SELECT */
+.bossSelectScreen{background:radial-gradient(circle at 50% 30%,#35105c,#050817 54%,#01030a)}
+.bossSelectCard{position:relative;width:min(1180px,92vw);padding:42px 44px 46px;border:1px solid #382d64;background:#071022ed;box-shadow:0 0 70px #0009;text-align:center}
+.bossSelectCard h2{margin:7px 0 5px;font-size:38px;letter-spacing:.06em}.bossSelectLead{margin:0 0 28px;color:#8fa1bf}
+.bossSelectBack{position:absolute;left:22px;top:20px;border:1px solid #53627e;background:#08152a;color:#c9d6eb;padding:9px 13px;border-radius:5px;font-weight:800;cursor:pointer}
+.bossChoices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.bossChoice{min-height:300px;padding:24px 18px;border:1px solid #405272;background:linear-gradient(180deg,#0a1930,#050a16);color:white;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.18s ease}
+.bossChoice:hover{transform:translateY(-5px);filter:brightness(1.16)}
+.bossChoice .bossIcon{font-size:70px;line-height:1;margin-bottom:20px;text-shadow:0 0 28px currentColor}
+.bossChoice small{font-size:12px;font-weight:1000;letter-spacing:.22em}.bossChoice b{font-size:23px;margin:9px 0 22px}.bossChoice em,.bossChoice i{font-style:normal;color:#aebbd0;font-size:13px;margin-top:7px}
+.bossChoice.easy{border-color:#25c991}.bossChoice.easy .bossIcon,.bossChoice.easy small{color:#50efb5}
+.bossChoice.normal{border-color:#b44dff}.bossChoice.normal .bossIcon,.bossChoice.normal small{color:#e15cff}
+.bossChoice.hard{border-color:#ff455e}.bossChoice.hard .bossIcon,.bossChoice.hard small{color:#ff536b}
+#bossSprite.boss-easy{filter:drop-shadow(0 0 32px #22e8a0) hue-rotate(105deg) saturate(.85)}
+#bossSprite.boss-normal{filter:drop-shadow(0 0 30px #ff26d1)}
+#bossSprite.boss-hard{filter:drop-shadow(0 0 42px #ff334f) hue-rotate(-28deg) saturate(1.55)}
+#bossSprite.boss-hard .core{animation-duration:.48s}
+@media(max-width:850px){.bossChoices{grid-template-columns:1fr}.bossChoice{min-height:190px}.bossSelectCard{padding-top:72px}}
+
+/* TYPE RAID 2.5.1 — result / personal best */
+.v21ResultCard{width:min(860px,92vw)!important;padding:34px 38px 30px!important;position:relative;overflow:hidden}
+.v251ResultDifficulty{font-size:11px;font-weight:1000;letter-spacing:.26em;color:#9caccc;margin-bottom:4px}
+.v251Boss{font-size:15px;font-weight:800;color:#b8c6df;margin:-5px 0 12px}
+.v251Rank{width:126px;height:126px;margin:9px auto 6px;border-radius:50%;display:grid;place-items:center;font-size:72px;line-height:1;font-weight:1000;font-style:italic;border:2px solid currentColor;text-shadow:0 0 22px currentColor;box-shadow:inset 0 0 30px #ffffff0c,0 0 35px currentColor;animation:v251RankIn .55s cubic-bezier(.2,1.6,.3,1)}
+.v251Rank.rank-s{color:#ffd34f}.v251Rank.rank-a{color:#58e5ff}.v251Rank.rank-b{color:#a878ff}.v251Rank.rank-c{color:#75d894}.v251Rank.rank-d{color:#8993a8}
+.v251Record{margin:9px auto 15px;width:max-content;padding:7px 18px;border:1px solid #ffd34f;color:#ffe26f;background:#5b410d55;font-size:13px;font-weight:1000;letter-spacing:.13em;box-shadow:0 0 25px #ffd34f33;animation:v251Record 1s ease-in-out infinite alternate}
+.v21ResultStats{grid-template-columns:repeat(6,1fr)!important;gap:8px!important}
+.v21ResultStats>div{min-width:0!important;padding:13px 7px!important}
+.v21ResultStats b{font-size:25px!important}.v21ResultStats small{display:block;margin-top:5px}
+.v21ResultStats em{display:block;margin-top:7px;color:#5ee8ff;font-size:9px;font-style:normal;font-weight:900;white-space:nowrap}
+@keyframes v251RankIn{from{opacity:0;transform:scale(.25) rotate(-18deg)}to{opacity:1;transform:scale(1) rotate(0)}}@keyframes v251Record{to{filter:brightness(1.35);transform:scale(1.035)}}
+@media(max-width:760px){.v21ResultStats{grid-template-columns:repeat(3,1fr)!important}.v251Rank{width:96px;height:96px;font-size:56px}}
+
+/* TYPE RAID 2.6.0 — phase transition foundation */
+.v260PhaseFx{position:fixed;inset:0;z-index:9998;pointer-events:none;display:grid;place-items:center;background:#02030acc;opacity:0;transition:opacity .18s}
+.v260PhaseFx[hidden]{display:none}.v260PhaseFx.show{opacity:1}
+.v260PhaseFx>div{text-align:center;transform:scale(.65);transition:transform .35s cubic-bezier(.2,1.5,.3,1)}
+.v260PhaseFx.show>div{transform:scale(1)}
+.v260PhaseFx span{display:block;color:#ff536b;font-size:12px;font-weight:1000;letter-spacing:.45em;text-shadow:0 0 18px #ff3355}
+.v260PhaseFx b{display:block;margin-top:8px;color:#fff;font-size:76px;font-style:italic;letter-spacing:.05em;text-shadow:0 0 18px #ff2ec8,0 0 48px #7b35ff}
+#bossSprite.phase-2{animation:trPhasePulse .7s ease-in-out infinite alternate;filter:drop-shadow(0 0 45px #ff36dd) saturate(1.3)}
+#bossSprite.phase-3{animation:trPhasePulse .36s ease-in-out infinite alternate;filter:drop-shadow(0 0 58px #ff2948) saturate(1.8) brightness(1.15)}
+@keyframes trPhasePulse{to{transform:scale(1.055);filter:drop-shadow(0 0 58px #ff2ec8) saturate(1.7)}}
+
+/* TYPE RAID 2.6.1 — Rim: Accel Pulse */
+body.rim-accelerated #bossSprite.boss-easy{animation:rimAccelPulse .42s ease-in-out infinite alternate;filter:drop-shadow(0 0 52px #38ffae) saturate(1.35) brightness(1.12)}
+body.rim-accelerated #phase{color:#55ffb5;text-shadow:0 0 16px #31ffa4}
+@keyframes rimAccelPulse{to{transform:scale(1.07) rotate(1deg)}}
+
+/* TYPE RAID 2.6.2 — Abyss Curse */
+.v262Curse{position:fixed;inset:0;z-index:9997;display:grid;place-items:center;pointer-events:none;background:#05000bb8;backdrop-filter:blur(3px)}
+.v262Curse[hidden]{display:none}.v262CurseBox{width:min(620px,88vw);padding:28px 34px;text-align:center;border:1px solid #bd42ff;background:linear-gradient(180deg,#1c0829f2,#07030df2);box-shadow:0 0 70px #a522ff66,inset 0 0 50px #8f20ff18;animation:curseIn .25s ease-out}
+.v262CurseBox small{display:block;color:#ff4d79;font-weight:1000;letter-spacing:.28em}.v262CurseBox>b{display:block;margin:7px 0 17px;font-size:28px;color:#e8c5ff;text-shadow:0 0 18px #b54cff}
+.v262CurseJp{font-size:25px;font-weight:900}.v262CurseRoma{margin-top:8px;font-size:25px;letter-spacing:.08em;color:#c5b4d8}.v262CurseRoma span{color:#62f0ff;text-shadow:0 0 12px #43e7ff}
+.v262CurseTrack{height:7px;margin:20px 0 10px;background:#24152d;overflow:hidden}.v262CurseTrack i{display:block;width:100%;height:100%;background:linear-gradient(90deg,#ff345c,#c63cff)}
+.v262CurseBox em{font-size:11px;font-style:normal;color:#ff9caf;font-weight:900;letter-spacing:.12em}
+@keyframes curseCountdown{from{width:100%}to{width:0%}}@keyframes curseIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}
+
+/* TYPE RAID 2.6.3 — Valga OVERDRIVE */
+.v263OD{position:fixed;inset:0;z-index:9997;display:grid;place-items:center;pointer-events:none;background:#0b0205c9;backdrop-filter:blur(3px)}
+.v263OD[hidden]{display:none}.v263ODBox{width:min(660px,90vw);padding:30px 38px;text-align:center;border:1px solid #ff435e;background:linear-gradient(180deg,#2b080ff2,#090308f2);box-shadow:0 0 80px #ff254d66,inset 0 0 60px #ff263018;animation:odIn .22s ease-out}
+.v263ODBox small{display:block;color:#ffb0b8;font-size:11px;font-weight:1000;letter-spacing:.25em}.v263ODBox>b{display:block;margin:6px 0 18px;color:#ff405b;font-size:34px;font-style:italic;letter-spacing:.12em;text-shadow:0 0 24px #ff2549}
+.v263ODJp{font-size:27px;font-weight:1000}.v263ODRoma{margin-top:8px;font-size:26px;letter-spacing:.08em;color:#d4b6bb}.v263ODRoma span{color:#ffdc62;text-shadow:0 0 12px #ffc936}
+.v263ODTrack{height:8px;margin:21px 0 10px;background:#321018;overflow:hidden}.v263ODTrack i{display:block;width:100%;height:100%;background:linear-gradient(90deg,#ffd84b,#ff304f)}
+.v263ODBox em{font-size:12px;font-style:normal;color:#ffb5be;font-weight:900}.v263OD.final .v263ODBox{border-color:#ffcf3f;box-shadow:0 0 100px #ff2b3c88}.v263OD.final .v263ODBox>b{color:#ffd64c}
+@keyframes odCountdown{from{width:100%}to{width:0%}}@keyframes odIn{from{opacity:0;transform:scale(.78)}to{opacity:1;transform:scale(1)}}
+
+/* v2.8.0 — independent background + boss layers */
+#arena.ind-stage-easy,
+#arena.ind-stage-normal,
+#arena.ind-stage-hard{
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  background-position:center 55%!important;
+  position:relative;
+}
+#arena.ind-stage-easy{background-image:linear-gradient(#00142622,#00142644),url("/assets/independent/bg_easy.png")!important}
+#arena.ind-stage-normal{background-image:linear-gradient(#09001422,#09001444),url("/assets/independent/bg_normal.png")!important}
+#arena.ind-stage-hard{background-image:linear-gradient(#16000022,#16000044),url("/assets/independent/bg_hard.png")!important}
+#arena.ind-stage-easy .sky,#arena.ind-stage-easy .ruins,
+#arena.ind-stage-normal .sky,#arena.ind-stage-normal .ruins,
+#arena.ind-stage-hard .sky,#arena.ind-stage-hard .ruins{opacity:0!important}
+
+#bossSprite.independentBoss{
+  width:720px!important;height:430px!important;
+  background:none!important;border:0!important;filter:none!important;
+  overflow:visible!important;transform-origin:50% 55%;
+}
+#bossSprite.independentBoss .indBoss{
+  display:none;position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  object-fit:contain;pointer-events:none;user-select:none;
+}
+#bossSprite.boss-easy .indEasy{display:block;width:700px;filter:drop-shadow(0 0 22px #54ffd1)}
+#bossSprite.boss-normal .indNormal{display:block;width:700px;filter:drop-shadow(0 0 24px #bc4cff)}
+#bossSprite.boss-hard .indHard{display:block;width:740px;filter:drop-shadow(0 0 24px #ff3447)}
+#bossSprite.rage .indBoss{animation:indRage .7s ease-in-out infinite alternate}
+#bossSprite.hit .indBoss,#bossSprite.critHit .indBoss{animation:indHit .28s ease-out}
+#bossSprite.attack .indBoss{animation:indAttack .42s ease-out}
+#bossSprite.breakStun .indBoss{animation:indBreak .16s linear 5}
+#bossSprite.dead .indBoss{opacity:.45;filter:grayscale(.75) brightness(.55)!important}
+@keyframes indRage{to{transform:translate(-50%,-51%) scale(1.035);filter:brightness(1.18) saturate(1.12)}}
+@keyframes indHit{35%{transform:translate(-47%,-50%) scale(.97);filter:brightness(1.9)}}
+@keyframes indAttack{45%{transform:translate(-50%,-54%) scale(1.07)}}
+@keyframes indBreak{50%{transform:translate(-52%,-50%)}}
+@media(max-width:1200px){
+ #bossSprite.independentBoss{width:560px!important;height:360px!important}
+ #bossSprite.boss-easy .indEasy,#bossSprite.boss-normal .indNormal{width:550px}
+ #bossSprite.boss-hard .indHard{width:580px}
+}
+
+/* v2.8.1 approved TYPE RAID boss set */
+#arena.ind-stage-easy,#arena.ind-stage-normal,#arena.ind-stage-hard{
+  background-size:cover!important;
+  background-position:center center!important;
+}
+#bossSprite.independentBoss{
+  width:900px!important;height:520px!important;
+  top:46%!important;
+}
+#bossSprite.boss-easy .indEasy{
+  width:820px!important;
+  filter:drop-shadow(0 0 18px #45ffd1) drop-shadow(0 0 38px #00cfa488)!important;
+}
+#bossSprite.boss-normal .indNormal{
+  width:860px!important;
+  filter:drop-shadow(0 0 20px #d14cff) drop-shadow(0 0 42px #8d16eaaa)!important;
+}
+#bossSprite.boss-hard .indHard{
+  width:900px!important;
+  filter:drop-shadow(0 0 20px #ff3a31) drop-shadow(0 0 45px #bd001baa)!important;
+}
+
+/* v2.8.2 final visual correction */
+#bossSprite.independentBoss{width:980px!important;height:560px!important;top:48%!important}
+#bossSprite.boss-easy .indEasy{width:900px!important}
+#bossSprite.boss-normal .indNormal{width:930px!important}
+#bossSprite.boss-hard .indHard{width:970px!important}
+#arena.ind-stage-easy,#arena.ind-stage-normal,#arena.ind-stage-hard{
+ background-size:cover!important;background-position:center center!important;
+}
+
+/* v2.8.3 boss compositing polish */
+#bossSprite.independentBoss{width:900px!important;height:500px!important;top:51%!important}
+#bossSprite.boss-easy .indEasy{width:790px!important}
+#bossSprite.boss-normal .indNormal{width:835px!important}
+#bossSprite.boss-hard .indHard{width:880px!important}
+.indBoss{mix-blend-mode:normal}
+
+/* v2.8.4 — eliminate any visible rectangular boss-source boundary */
+#bossSprite.independentBoss{overflow:visible!important;background:transparent!important;border:none!important;box-shadow:none!important}
+#bossSprite.independentBoss .indBoss{
+ border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;
+ -webkit-mask-image:radial-gradient(ellipse 47% 45% at 50% 51%,#000 70%,transparent 100%);
+ mask-image:radial-gradient(ellipse 47% 45% at 50% 51%,#000 70%,transparent 100%);
+}
+
+/* v2.8.5 NORMAL Abyss composition */
+#bossSprite.boss-normal{width:980px!important;height:520px!important;top:50%!important}
+#bossSprite.boss-normal .indNormal{
+ width:900px!important;
+ filter:drop-shadow(0 0 22px #d14cff) drop-shadow(0 0 46px #7412d8aa)!important;
+ -webkit-mask-image:radial-gradient(ellipse 49% 47% at 50% 50%,#000 72%,transparent 100%)!important;
+ mask-image:radial-gradient(ellipse 49% 47% at 50% 50%,#000 72%,transparent 100%)!important;
+}
+
+/* v2.9.0 player artwork */
+.caster .playerArt{
+ position:absolute;left:50%;top:50%;
+ width:330px;height:auto;object-fit:contain;
+ transform:translate(-50%,-50%);
+ pointer-events:none;user-select:none;
+ filter:drop-shadow(0 0 14px rgba(70,210,255,.65));
+ z-index:3;
+}
+.caster.p2 .playerArt{filter:drop-shadow(0 0 14px rgba(255,70,220,.65))}
+.caster:has(.playerArt){background:none!important;border:0!important;clip-path:none!important}
+.caster:has(.playerArt)::before,.caster:has(.playerArt)::after{opacity:0!important}
+@media(max-width:1200px){.caster .playerArt{width:270px}}
+
+/* v2.18.1 actual caster markup fix */
+.caster.leftCaster,.caster.rightCaster{width:340px!important;height:330px!important;overflow:visible!important}
+.caster .casterBody,.caster .handGlow{display:none!important}
+.caster .playerArt{
+ display:block!important;position:absolute!important;
+ left:50%!important;top:50%!important;width:350px!important;max-width:none!important;
+ transform:translate(-50%,-50%)!important;z-index:8!important;
+}
+.rightCaster{transform:none!important}
+.rightCaster .playerArt{transform:translate(-50%,-50%)!important}
+
+/* v2.18.1 typing attack feedback */
+.projectile{width:42px!important;height:42px!important;font-size:23px!important;border:2px solid #dff8ff;will-change:transform;transition:transform .235s cubic-bezier(.08,.78,.16,1)!important}
+.projectile.me{background:radial-gradient(circle,#fff 0 10%,#49dcff 24%,#087fff 58%,#032c78);box-shadow:0 0 10px #fff,0 0 28px #23c8ff,0 0 55px #087fff}
+.projectile.partnerShot{background:radial-gradient(circle,#fff 0 10%,#ff8ee8 24%,#ff28ad 58%,#710347)}
+.projectile.crit{width:58px!important;height:58px!important;font-size:30px!important;border-color:#fff4a7;box-shadow:0 0 18px #fff,0 0 45px #ffd33d,0 0 90px #ff7b00!important}
+.typeMuzzle,.typeImpact,.typeSpark{position:absolute;z-index:24;pointer-events:none}
+.typeMuzzle{width:24px;height:24px;border:3px solid #7eeaff;border-radius:50%;transform:translate(-50%,-50%);animation:typeMuzzle .26s ease-out forwards;box-shadow:0 0 18px #24c8ff}
+.typeMuzzle.partnerShot{border-color:#ff70d6;box-shadow:0 0 18px #ff2ab5}
+.typeMuzzle.crit{border-color:#ffe86b;box-shadow:0 0 28px #ffb000}
+.typeImpact{width:20px;height:20px;border:4px solid #dffcff;border-radius:50%;transform:translate(-50%,-50%);animation:typeImpact .42s ease-out forwards;box-shadow:0 0 18px #3edcff,0 0 40px #178cff}
+.typeImpact.crit{border-width:6px;border-color:#fff29b;box-shadow:0 0 28px #fff,0 0 70px #ff9d00}
+.typeSpark{width:7px;height:7px;border-radius:50%;background:#dffcff;box-shadow:0 0 9px #49dfff;transform:translate(-50%,-50%);animation:typeSpark .4s ease-out forwards}
+.wordBurst{position:absolute;z-index:28;transform:translate(-50%,-50%);font-size:28px;font-weight:1000;letter-spacing:3px;color:#7fffe5;text-shadow:0 0 10px #fff,0 0 25px #17cfff;animation:wordBurst .65s ease-out forwards;pointer-events:none;white-space:nowrap}
+#bossSprite.wordHit .indBoss{animation:wordBossHit .34s ease-out!important}
+.arena.typeShake{animation:typeScreenShake .2s linear}
+@keyframes typeMuzzle{0%{opacity:1;transform:translate(-50%,-50%) scale(.3)}100%{opacity:0;transform:translate(-50%,-50%) scale(2.7)}}
+@keyframes typeImpact{0%{opacity:1;transform:translate(-50%,-50%) scale(.25)}100%{opacity:0;transform:translate(-50%,-50%) scale(4.2)}}
+@keyframes typeSpark{to{opacity:0;transform:translate(calc(-50% + cos(var(--a))*var(--d)),calc(-50% + sin(var(--a))*var(--d))) scale(.15)}}
+@keyframes wordBurst{0%{opacity:0;transform:translate(-50%,-30%) scale(.6)}25%{opacity:1;transform:translate(-50%,-70%) scale(1.12)}100%{opacity:0;transform:translate(-50%,-135%) scale(.9)}}
+@keyframes wordBossHit{35%{transform:translate(-50%,-50%) scale(1.055);filter:brightness(1.65)}70%{transform:translate(-50%,-50%) scale(.985)}}
+@keyframes typeScreenShake{0%,100%{transform:translate(0)}25%{transform:translate(-5px,2px)}50%{transform:translate(5px,-2px)}75%{transform:translate(-3px,-1px)}}
+
+/* v2.18.1 clean CO-OP difficulty rebuild */
+.coopDifficulty{margin:14px 0;padding:12px;border:1px solid #273b66;border-radius:12px;background:#081326;position:relative;z-index:20}
+.coopDifficulty small{display:block;margin-bottom:8px;color:#91a6c8;font-weight:900;letter-spacing:1.5px}
+.coopDiffBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.coopDiff{position:relative!important;z-index:21!important;pointer-events:auto!important;cursor:pointer!important;padding:9px 4px!important;border:1px solid #34486d!important;background:#0c1830!important;color:#aebed8!important;border-radius:8px!important;font-weight:1000!important}
+.coopDiff.easy.active{color:#6fffd0!important;border-color:#36dba9!important;box-shadow:0 0 16px #25e6ad55}
+.coopDiff.normal.active{color:#dc8cff!important;border-color:#a84dff!important;box-shadow:0 0 16px #a84dff55}
+.coopDiff.hard.active{color:#ff7373!important;border-color:#ff4141!important;box-shadow:0 0 16px #ff343455}
+.coopDifficulty em{display:block;margin-top:9px;color:#dbe8ff;font-size:12px;font-style:normal}
+.waitDifficulty{display:inline-block;margin:5px auto 14px;padding:7px 13px;border:1px solid #8a4cff;border-radius:999px;color:#dcbaff;background:#170c2b;font-weight:1000}
+
+/* v2.18.1 P2 illustration visibility */
+body:not(.solo-mode) .rightCaster{display:block!important;visibility:visible!important;opacity:1!important}
+body:not(.solo-mode) .rightCaster .playerArt{display:block!important;visibility:visible!important;opacity:1!important;z-index:9!important}
+body.solo-mode .rightCaster{display:none!important}
+
+/* v2.18.1 — P2 faces inward toward the boss */
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:none!important;
+  transform-origin:center center!important;
+}
+
+/* v2.18.1 — REAL P2 art positioning fix
+   Move the IMAGE itself, not only its wrapper. */
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:translateX(-120px)!important;
+  transform-origin:center center!important;
+}
+
+/* v2.18.1 — P2 PNG is physically mirrored; never mirror it again in CSS */
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:translateX(-120px)!important;
+}
+
+/* v2.18.1: PNG orientation is authoritative; CSS must NEVER mirror P2 */
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:translateX(-120px)!important;
+}
+
+/* v2.18.1 — symmetric P1/P2 battlefield placement */
+body:not(.solo-mode) .leftCaster{
+  left:1.5%!important;
+  right:auto!important;
+}
+body:not(.solo-mode) .rightCaster{
+  right:1.5%!important;
+  left:auto!important;
+}
+body:not(.solo-mode) .leftCaster .playerArt{
+  transform:none!important;
+}
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:none!important;
+}
+
+/* v2.18.1 — visually symmetric character placement */
+body:not(.solo-mode) .leftCaster .playerArt{
+  transform:translateX(-35px)!important;
+}
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:translateX(-145px)!important;
+}
+
+/* v2.18.1 — screenshot-tuned visual symmetry */
+body:not(.solo-mode) .leftCaster .playerArt{
+  transform:translateX(-55px)!important;
+}
+body:not(.solo-mode) .rightCaster .playerArt{
+  transform:translateX(-200px)!important;
+}
+
+.rematchDifficulty{margin:12px auto;max-width:420px;padding:10px;border:1px solid #34486d;border-radius:10px;background:#081326}
+.rematchDifficulty small{display:block;margin-bottom:7px;color:#b8c9e8;font-weight:900}
+.rematchDiffBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.rematchDiff{cursor:pointer;padding:8px!important;border:1px solid #40557a!important;background:#0c1830!important;color:#b9c7dd!important;border-radius:7px!important;font-weight:1000!important}
+.rematchDiff.easy.active{color:#6fffd0!important;border-color:#36dba9!important;box-shadow:0 0 14px #25e6ad55}
+.rematchDiff.normal.active{color:#dc8cff!important;border-color:#a84dff!important;box-shadow:0 0 14px #a84dff55}
+.rematchDiff.hard.active{color:#ff7373!important;border-color:#ff4141!important;box-shadow:0 0 14px #ff343455}
+
+#v21Result #rematchDifficulty{display:block;width:min(520px,90%);margin:16px auto;padding:14px;position:relative;z-index:999;border:2px solid #804dff;border-radius:12px;background:#0b1025;box-shadow:0 0 22px #7a38ff55}
+#v21Result .rematchDiffBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#v21Result .rematchDiff{display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:relative;z-index:1000;min-height:42px}
+
+/* v2.18.1 actual result-screen visibility fix */
+#rematchDifficulty[hidden]{display:none!important}
+#v21Result:not([hidden]) #rematchDifficulty:not([hidden]){
+ display:block!important;visibility:visible!important;opacity:1!important;
+}
+
+#coopResultActions[hidden]{display:none!important}
+#coopResultActions{margin-top:14px}
+.legacyRematchDifficulty{margin:0 0 12px;padding:12px;border:1px solid #5c3df0;border-radius:10px;background:#0b1228}
+.legacyRematchDifficulty small{display:block;margin-bottom:8px;font-weight:900;color:#cbd5ff}
+.legacyRematchBtns{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.legacyRematchBtns button{padding:9px 7px;border:1px solid #40517c;border-radius:7px;background:#111b38;color:#aebbd8;font-weight:1000;cursor:pointer}
+.legacyRematchBtns button[data-rematch-diff="easy"].active{border-color:#35e6ae;color:#6fffd0;box-shadow:0 0 12px #35e6ae55}
+.legacyRematchBtns button[data-rematch-diff="normal"].active{border-color:#bd45ff;color:#df8cff;box-shadow:0 0 12px #bd45ff55}
+.legacyRematchBtns button[data-rematch-diff="hard"].active{border-color:#ff4848;color:#ff7777;box-shadow:0 0 12px #ff484855}
+#coopRematchBtn{width:100%;padding:12px;border:0;border-radius:8px;background:linear-gradient(90deg,#315dff,#d719df);color:white;font-weight:1000;cursor:pointer}
+#coopRematchStatus{margin-top:8px;font-size:12px;color:#aab8da;font-weight:900}
+
+/* v2.18.1 CO-OP result upgrade */
+#result .panel.result{width:min(760px,92vw);max-width:760px}
+.teamResultLabel{font-size:11px;letter-spacing:.22em;color:#9baad0;font-weight:1000;margin-bottom:8px}
+.teamRank{font-size:58px;line-height:1;font-weight:1000;margin:2px 0 4px;text-shadow:0 0 25px currentColor}
+.teamRank[data-rank="S"]{color:#ffe56e}.teamRank[data-rank="A"]{color:#77e8ff}.teamRank[data-rank="B"]{color:#d68cff}.teamRank[data-rank="C"]{color:#aab3c8}
+.coopResultGrid{display:grid;grid-template-columns:1fr .9fr 1fr;gap:10px;margin:12px 0}
+.coopPlayerResult,.coopTeamResult{padding:12px 10px;border:1px solid #304267;border-radius:10px;background:#09142a;text-align:left}
+.coopPlayerResult> b,.coopTeamResult> b{display:block;font-size:10px;letter-spacing:.13em;color:#8294bd}
+.coopPlayerResult>strong,.coopTeamResult>strong{display:block;font-size:16px;margin:4px 0 9px;color:white}
+.coopPlayerResult>div,.coopTeamResult>div{font-size:11px;line-height:1.75;color:#aab8d8}
+.coopPlayerResult>div b,.coopTeamResult>div b{float:right;color:#fff}
+.coopPlayerResult.p1{border-color:#226fbb}.coopPlayerResult.p2{border-color:#8d38b9}
+#resultStats{font-size:11px;color:#9eacd0;margin:7px 0}
+@media(max-width:650px){.coopResultGrid{grid-template-columns:1fr 1fr}.coopTeamResult{grid-column:1/-1;grid-row:2}}
+
+/* v2.18.1 boss defeat cinematic */
+.defeatCinematic{position:fixed;inset:0;z-index:99999;pointer-events:none;overflow:hidden;background:radial-gradient(circle at center,rgba(157,48,255,.16),rgba(0,0,0,.08) 42%,rgba(0,0,0,.68));animation:defeatScene 2.25s ease both}
+.defeatFlash{position:absolute;inset:-20%;background:radial-gradient(circle,#fff 0 3%,#75dfff 5%,#c23dff 12%,transparent 34%);animation:defeatFlash .9s ease-out both}
+.defeatLines{position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%,rgba(255,255,255,.18) 0 1deg,transparent 1deg 9deg);animation:defeatSpin 1.2s ease-out both}
+.defeatTitle{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;filter:drop-shadow(0 0 22px #b544ff)}
+.defeatTitle small{display:block;color:#aeeaff;font-weight:1000;letter-spacing:.45em;font-size:15px;animation:defeatSmall .6s .35s both}
+.defeatTitle b{display:block;color:#fff;font-size:clamp(42px,8vw,105px);font-weight:1000;font-style:italic;letter-spacing:.06em;text-shadow:0 0 8px #fff,0 0 30px #5bdcff,0 0 60px #c02cff;animation:defeatText .75s .48s cubic-bezier(.15,.8,.2,1.2) both}
+.defeatCinematic.out{opacity:0;transition:opacity .45s ease}
+#bossSprite.defeatBoss{animation:defeatBossShake .42s linear infinite!important;filter:brightness(2.2) saturate(1.8) drop-shadow(0 0 28px #fff)!important}
+#bossSprite.defeatBurst{transform:scale(1.22)!important;opacity:.08!important;transition:transform .55s ease,opacity .55s ease!important}
+@keyframes defeatScene{0%{background-color:rgba(0,0,0,0)}25%{background-color:rgba(0,0,0,.2)}100%{background-color:rgba(0,0,0,.72)}}
+@keyframes defeatFlash{0%{opacity:0;transform:scale(.15)}18%{opacity:1}70%,100%{opacity:0;transform:scale(4)}}
+@keyframes defeatSpin{0%{opacity:0;transform:scale(.3) rotate(0)}35%{opacity:.8}100%{opacity:0;transform:scale(2.2) rotate(25deg)}}
+@keyframes defeatText{0%{opacity:0;transform:scale(2.8);filter:blur(18px)}65%{opacity:1;transform:scale(.92);filter:blur(0)}100%{transform:scale(1)}}
+@keyframes defeatSmall{from{opacity:0;letter-spacing:1em}to{opacity:1;letter-spacing:.45em}}
+@keyframes defeatBossShake{0%,100%{transform:translate(0,0) scale(1.02)}25%{transform:translate(-8px,3px) scale(1.04)}50%{transform:translate(7px,-4px) scale(1.03)}75%{transform:translate(-4px,-2px) scale(1.05)}}
+
+/* v2.18.1 ULT HUD */
+.ultHud{position:absolute;left:50%;bottom:8px;transform:translateX(-50%);z-index:45;width:min(720px,72%);display:grid;grid-template-columns:1fr 76px 110px 1fr;align-items:center;gap:8px;pointer-events:none}
+.ultSide{display:grid;grid-template-columns:auto 1fr 38px;gap:6px;align-items:center;font-size:10px;font-weight:1000;letter-spacing:.08em}.ultSide.p2{direction:rtl}.ultSide.p2>*{direction:ltr}
+.ultTrack{height:8px;background:#07101f;border:1px solid #33476b;border-radius:8px;overflow:hidden}.ultTrack i{display:block;height:100%;width:0;transition:width .12s;background:linear-gradient(90deg,#27cfff,#4775ff);box-shadow:0 0 12px #31cfff}.p2 .ultTrack i{background:linear-gradient(90deg,#ff3ed2,#8d4cff);box-shadow:0 0 12px #ff42db}
+#ultButton{pointer-events:auto;border:1px solid #70dcff;border-radius:8px;background:#102448;color:#fff;font-weight:1000;padding:8px 5px;cursor:pointer;box-shadow:0 0 14px #36bfff55}#ultButton:disabled{opacity:.38;box-shadow:none}
+.dualCastReady{font-size:10px;text-align:center;font-weight:1000;color:#65718d;letter-spacing:.08em}.dualCastReady.ready{color:#fff;text-shadow:0 0 8px #fff,0 0 18px #d83cff;animation:dualPulse .55s infinite alternate}
+.ultCinematic{position:fixed;inset:0;z-index:99990;pointer-events:none;overflow:hidden;background:rgba(0,0,20,.2)}.ultBeam{position:absolute;top:61%;width:52%;height:13px;filter:blur(1px);box-shadow:0 0 12px #fff,0 0 32px currentColor;animation:ultBeam .65s ease-out both}.ultBeam.left{left:-4%;color:#27d9ff;background:linear-gradient(90deg,transparent,#27d9ff,#fff);transform:rotate(-9deg)}.ultBeam.right{right:-4%;color:#ff39db;background:linear-gradient(270deg,transparent,#ff39db,#fff);transform:rotate(9deg)}
+.ultImpact{position:absolute;left:50%;top:48%;width:40px;height:40px;border-radius:50%;transform:translate(-50%,-50%);background:#fff;box-shadow:0 0 25px #fff,0 0 80px #b63cff;animation:ultImpact .9s .25s ease-out both}.ultTitle{position:absolute;left:50%;top:28%;transform:translate(-50%,-50%);font-size:clamp(34px,6vw,76px);font-weight:1000;font-style:italic;color:#fff;text-shadow:0 0 12px #fff,0 0 32px #8c49ff;animation:ultTitle .6s .2s both}.ultTitle small{display:block;text-align:center;font-size:11px;letter-spacing:.35em;color:#a9eaff}.ultCinematic.out{opacity:0;transition:.3s}
+.ultShake{animation:ultShake .09s 7 linear!important}
+@keyframes dualPulse{to{transform:scale(1.08)}}@keyframes ultBeam{0%{opacity:0;width:0}30%{opacity:1}100%{opacity:0;width:58%}}@keyframes ultImpact{0%{opacity:0;transform:translate(-50%,-50%) scale(.1)}35%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(8)}}@keyframes ultTitle{from{opacity:0;transform:translate(-50%,-50%) scale(1.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes ultShake{0%,100%{transform:translate(0)}50%{transform:translate(6px,-3px)}}
+
+/* v2.18.1 — unmistakable ULT READY feedback */
+#ultButton.ready{opacity:1!important;background:linear-gradient(135deg,#fff3a0,#ff9d00 42%,#ff3bd4)!important;color:#16051d!important;border:2px solid #fff!important;box-shadow:0 0 10px #fff,0 0 28px #ffd43b,0 0 55px #ff42db!important;animation:ultReadyButton .55s infinite alternate!important;transform-origin:center}
+body.my-ult-ready .ultHud{filter:drop-shadow(0 0 9px #ffd84a)}
+body.my-ult-ready .ultTrack{border-color:#ffe875!important;box-shadow:0 0 12px #ffd43b}
+body.my-ult-ready .ultSide b{color:#fff6a0;text-shadow:0 0 9px #ffd43b}
+.dualCastReady.ready{font-size:12px!important;color:#fff!important;background:linear-gradient(90deg,#22dfff,#fff,#ff42db);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 7px #d34cff);animation:dualReadyBig .42s infinite alternate!important}
+@keyframes ultReadyButton{from{transform:scale(1);filter:brightness(1)}to{transform:scale(1.13);filter:brightness(1.35)}}
+@keyframes dualReadyBig{from{transform:scale(1)}to{transform:scale(1.12)}}
+
+/* v2.18.1 — SPACE key ULT guide */
+.ultSpaceGuide{position:absolute;left:50%;bottom:48px;z-index:46;transform:translateX(-50%) translateY(5px);display:flex;align-items:center;gap:7px;padding:5px 10px;border:1px solid #3d4d70;border-radius:8px;background:rgba(5,12,28,.78);color:#7785a5;font-size:10px;font-weight:900;letter-spacing:.05em;opacity:.52;pointer-events:none;transition:.18s}
+.ultSpaceGuide kbd{padding:3px 8px;border:1px solid #657393;border-bottom-width:3px;border-radius:5px;background:#111a2d;color:#aab7d4;font:900 10px/1 sans-serif}
+.ultSpaceGuide.ready{opacity:1;transform:translateX(-50%) translateY(0) scale(1.08);border-color:#ffe86b;color:#fff6a0;background:rgba(28,18,5,.94);box-shadow:0 0 10px #fff3,0 0 26px #ffd43b88;animation:spaceReadyPulse .55s infinite alternate}
+.ultSpaceGuide.ready kbd{border-color:#fff1a0;background:linear-gradient(#fff4ae,#ffbd38);color:#291300;box-shadow:0 0 12px #ffd43b}
+.ultSpaceGuide.dual{border-color:#e978ff;color:#fff;background:linear-gradient(90deg,rgba(13,91,120,.94),rgba(85,19,106,.94));box-shadow:0 0 14px #55dfff88,0 0 30px #ff42db77}
+.ultSpaceGuide.dual kbd{border-color:#fff;background:#fff;color:#45185c}
+@keyframes spaceReadyPulse{from{filter:brightness(1)}to{filter:brightness(1.28)}}
+
+/* v2.18.1 — actual ULT button clearly shows SPACE */
+#ultButton{min-width:112px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;padding:6px 8px!important}
+#ultButton .ultKey{display:inline-block;padding:3px 6px;border:1px solid #7486aa;border-bottom-width:3px;border-radius:5px;background:#091226;color:#c7d3ee;font-size:9px;font-weight:1000;line-height:1}
+#ultButton .ultAction{font-size:10px;font-weight:1000;white-space:nowrap}
+#ultButton.ready{min-width:150px!important}
+#ultButton.ready .ultKey{background:#fff4ad!important;color:#241400!important;border-color:#fff!important;box-shadow:0 0 10px #fff4a8}
+#ultButton.ready .ultAction{font-size:11px!important;color:#19051c!important}
+
+/* v2.18.1 clean ULT UI: floating guide removed */
+#ultSpaceGuide{display:none!important}
+
+/* v2.18.1 — 5 sec x2 typing points */
+body.ult-double-active .ultHud{filter:drop-shadow(0 0 12px #ffe76a) drop-shadow(0 0 24px #ff4edb)}
+body.ult-double-active #ultButton{background:linear-gradient(90deg,#ffcb31,#ff4fd8)!important;color:#16051d!important;border-color:#fff!important}
+body.ult-double-active #ultButton .ultAction::after{content:"  ×2 ACTIVE";font-weight:1000}
+
+/* v2.18.1 — dopamine ULT RUSH */
+.ultRushFx{position:absolute;inset:0;z-index:34;overflow:hidden;pointer-events:none;opacity:0;transition:opacity .14s}
+body.ult-double-active .ultRushFx{opacity:1}
+.ultRushVignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 35%,rgba(51,19,104,.14) 62%,rgba(255,41,203,.20) 100%);box-shadow:inset 0 0 55px rgba(70,218,255,.24);animation:rushVibe .55s infinite alternate}
+.ultRushSpeed{position:absolute;inset:-30%;background:repeating-conic-gradient(from 0deg at 50% 48%,transparent 0 5deg,rgba(126,225,255,.13) 5.3deg 5.8deg,transparent 6deg 11deg);mask-image:radial-gradient(circle,transparent 0 18%,#000 42%);-webkit-mask-image:radial-gradient(circle,transparent 0 18%,#000 42%);animation:rushSpin 2.4s linear infinite}
+.ultRushBadge{position:absolute;right:4%;top:20%;display:flex;flex-direction:column;align-items:center;transform:skew(-7deg);filter:drop-shadow(0 0 14px #ff42d8)}
+.ultRushBadge b{font-size:42px;line-height:.9;color:#fff5a4;text-shadow:0 0 8px #fff,0 0 22px #ffb62e}
+.ultRushBadge span{font-size:10px;font-weight:1000;letter-spacing:.2em;color:#fff}
+.ultRushBadge em{margin-top:3px;font-size:17px;font-style:normal;font-weight:1000;color:#68eaff}
+.ultRushFx.start .ultRushBadge{animation:rushStart .42s cubic-bezier(.1,.8,.2,1.35)}
+body.ult-double-active #bossSprite{filter:drop-shadow(0 0 15px rgba(255,73,218,.7)) brightness(1.08)}
+.ultRushHit{filter:brightness(1.16)}
+.ultRushHit::after{content:"";position:absolute;inset:0;z-index:60;pointer-events:none;background:radial-gradient(circle at 50% 42%,rgba(255,255,255,.22),transparent 32%);animation:rushHit .09s both}
+.ultRushPop{position:absolute;z-index:80;transform:translate(-50%,-50%) rotate(-5deg);font-size:20px;font-weight:1000;font-style:italic;color:#fff5a2;text-shadow:0 0 5px #fff,0 0 14px #ff38d1;animation:rushPop .43s ease-out both;pointer-events:none}
+@keyframes rushVibe{from{filter:hue-rotate(0deg);opacity:.72}to{filter:hue-rotate(18deg);opacity:1}}
+@keyframes rushSpin{to{transform:rotate(360deg) scale(1.04)}}
+@keyframes rushStart{0%{opacity:0;transform:scale(2.5) skew(-7deg)}70%{opacity:1;transform:scale(.9) skew(-7deg)}100%{transform:scale(1) skew(-7deg)}}
+@keyframes rushHit{from{opacity:1}to{opacity:0}}
+@keyframes rushPop{0%{opacity:0;transform:translate(-50%,-50%) scale(1.8) rotate(-5deg)}35%{opacity:1;transform:translate(-50%,-50%) scale(.95) rotate(-5deg)}100%{opacity:0;transform:translate(-50%,-90%) scale(1.08) rotate(-5deg)}}
+
+/* v2.18.1 AUTO ULT FEVER */
+#ultButton{pointer-events:none!important}
+body.ult-double-active #bossSprite{filter:none!important}
+body.ult-double-active .ultRushHit{filter:none!important}
+body.ult-double-active .ultRushHit::after{display:none!important}
+body.ult-double-active .ultRushVignette{
+ background:radial-gradient(ellipse at center,transparent 45%,rgba(55,219,255,.11) 72%,rgba(255,42,211,.16) 100%)!important;
+ box-shadow:inset 0 0 38px rgba(80,224,255,.18)!important;
+}
+body.ult-double-active .ultRushSpeed{opacity:.62!important;animation-duration:1.6s!important}
+body.ult-double-active #game::before{
+ content:"⚡ FEVER ×2";position:absolute;left:50%;top:13%;transform:translateX(-50%);
+ z-index:35;font-size:17px;font-weight:1000;font-style:italic;letter-spacing:.13em;color:#fff3a0;
+ text-shadow:0 0 7px #fff,0 0 17px #ff43d7,0 0 28px #36ddff;pointer-events:none;
+ animation:feverPulse .28s ease-in-out infinite alternate;
+}
+@keyframes feverPulse{to{transform:translateX(-50%) scale(1.07);filter:brightness(1.25)}}
+.ultFeverStart .ultBeam,.ultFeverStart .ultImpact{display:none!important}
+.ultFeverStart{background:radial-gradient(circle at center,rgba(255,235,91,.12),rgba(75,219,255,.07) 35%,transparent 62%)!important}
+.ultFeverStart .ultTitle b{display:block;color:#fff5a2;text-shadow:0 0 10px #fff,0 0 25px #ff42d8!important}
+.ultFeverStart .ultTitle small{color:#8ff4ff!important}
+.focusCombo{
+ position:absolute;left:50%;top:43%;transform:translate(-50%,-100%);z-index:46;
+ display:flex;align-items:baseline;gap:8px;padding:4px 14px;border-radius:999px;
+ background:rgba(4,8,24,.62);border:1px solid rgba(102,220,255,.42);
+ box-shadow:0 0 18px rgba(71,202,255,.20);backdrop-filter:blur(4px);pointer-events:none;
+}
+.focusCombo span{font-size:10px;font-weight:1000;letter-spacing:.18em;color:#9ab6d8}
+.focusCombo b{font-size:32px;line-height:1;font-weight:1000;font-style:italic;color:#fff;text-shadow:0 0 8px #5ee4ff,0 0 18px #9b5cff}
+.focusCombo.tick{animation:comboTick .12s ease-out}
+body.ult-double-active .focusCombo{border-color:#ffe56c;box-shadow:0 0 20px rgba(255,225,73,.34)}
+body.ult-double-active .focusCombo b{color:#fff39a;text-shadow:0 0 8px #fff,0 0 19px #ff43d7}
+@keyframes comboTick{50%{transform:translate(-50%,-100%) scale(1.14)}}
+
+/* v2.18.1 — larger isolated COMBO HUD */
+.focusCombo{
+ left:50%!important;
+ top:25%!important;
+ transform:translateX(-50%)!important;
+ padding:6px 18px!important;
+ gap:10px!important;
+ min-width:118px!important;
+ justify-content:center!important;
+ background:rgba(3,7,22,.70)!important;
+ border:1px solid rgba(104,220,255,.48)!important;
+ box-shadow:0 0 22px rgba(71,202,255,.22)!important;
+}
+.focusCombo span{font-size:11px!important}
+.focusCombo b{font-size:44px!important;line-height:.92!important}
+.focusCombo.tick{animation:comboTickV2171 .12s ease-out!important}
+@keyframes comboTickV2171{50%{transform:translateX(-50%) scale(1.16)}}
+body.ult-double-active .focusCombo{top:25%!important}
+
+/* MISS: no sound, unmistakable red visual feedback */
+.missFlashText{
+ position:absolute;left:50%;top:43%;transform:translate(-50%,-50%) scale(.72);
+ z-index:90;pointer-events:none;opacity:0;
+ font-size:38px;font-weight:1000;font-style:italic;letter-spacing:.10em;
+ color:#ff3d52;text-shadow:0 0 5px #fff,0 0 15px #ff1935,0 0 30px #ff001e;
+}
+.missFlashText.show{animation:missTextV2171 .42s ease-out both}
+body.miss-red-flash #game::after{
+ content:"";position:absolute;inset:0;z-index:88;pointer-events:none;
+ border:3px solid rgba(255,37,57,.72);
+ box-shadow:inset 0 0 42px rgba(255,15,39,.26);
+ animation:missRedV2171 .18s ease-out both;
+}
+@keyframes missTextV2171{
+ 0%{opacity:0;transform:translate(-50%,-50%) scale(1.6)}
+ 25%{opacity:1;transform:translate(-50%,-50%) scale(.94)}
+ 55%{opacity:1;transform:translate(-50%,-50%) scale(1)}
+ 100%{opacity:0;transform:translate(-50%,-62%) scale(.96)}
+}
+@keyframes missRedV2171{from{opacity:1}to{opacity:0}}
+
+/* v2.18.1 — large COMBO in right-side open space */
+.focusCombo{
+ left:auto!important;
+ right:9%!important;
+ top:64%!important;
+ transform:none!important;
+ min-width:190px!important;
+ padding:10px 20px!important;
+ gap:12px!important;
+ justify-content:center!important;
+ background:rgba(3,7,22,.66)!important;
+ border:2px solid rgba(102,220,255,.52)!important;
+ border-radius:16px!important;
+ box-shadow:0 0 24px rgba(70,210,255,.24)!important;
+}
+.focusCombo span{
+ font-size:15px!important;
+ letter-spacing:.18em!important;
+}
+.focusCombo b{
+ font-size:72px!important;
+ line-height:.85!important;
+}
+.focusCombo.tick{animation:comboRightTick .12s ease-out!important}
+@keyframes comboRightTick{50%{transform:scale(1.13)}}
+body.ult-double-active .focusCombo{
+ top:64%!important;
+ border-color:#ffe56c!important;
+ box-shadow:0 0 28px rgba(255,225,73,.40)!important;
+}
+
+/* v2.18.1 — COMBO at typing panel upper-right */
+.focusCombo{
+ left:auto!important;
+ right:28%!important;
+ top:57%!important;
+ transform:none!important;
+ min-width:142px!important;
+ padding:7px 14px!important;
+ gap:9px!important;
+ border-radius:13px!important;
+ z-index:52!important;
+}
+.focusCombo span{font-size:12px!important}
+.focusCombo b{font-size:52px!important;line-height:.88!important}
+.focusCombo.tick{animation:comboInputTick .12s ease-out!important}
+@keyframes comboInputTick{50%{transform:scale(1.13)}}
+body.ult-double-active .focusCombo{top:57%!important}
+
+/* v2.18.1 — COMBO is now a child of .typingBox (true input-panel anchor) */
+.typingBox{overflow:visible!important}
+.typingBox .focusCombo{
+ position:absolute!important;
+ left:auto!important;
+ right:-118px!important;
+ top:-4px!important;
+ transform:none!important;
+ min-width:112px!important;
+ width:auto!important;
+ padding:6px 12px!important;
+ gap:7px!important;
+ z-index:90!important;
+ border-radius:12px!important;
+ background:rgba(3,7,22,.78)!important;
+ border:1px solid rgba(102,220,255,.58)!important;
+ box-shadow:0 0 18px rgba(70,210,255,.28)!important;
+}
+.typingBox .focusCombo span{font-size:10px!important;letter-spacing:.16em!important}
+.typingBox .focusCombo b{font-size:46px!important;line-height:.9!important}
+.typingBox .focusCombo.tick{animation:comboTypingCornerTick .12s ease-out!important}
+@keyframes comboTypingCornerTick{50%{transform:scale(1.13)}}
+body.ult-double-active .typingBox .focusCombo{
+ left:auto!important;right:-118px!important;top:-4px!important;transform:none!important;
+ border-color:#ffe56c!important;box-shadow:0 0 22px rgba(255,225,73,.42)!important;
+}
+
+/* v2.18.1 — COMBO in marked area above typing panel, upper-right */
+.typingBox .focusCombo{
+ position:absolute!important;
+ left:auto!important;
+ right:18px!important;
+ top:-112px!important;
+ transform:none!important;
+ min-width:126px!important;
+ padding:7px 14px!important;
+ z-index:90!important;
+}
+.typingBox .focusCombo span{font-size:11px!important}
+.typingBox .focusCombo b{font-size:52px!important}
+.typingBox .focusCombo.tick{animation:comboMarkedTick .12s ease-out!important}
+@keyframes comboMarkedTick{50%{transform:scale(1.13)}}
+body.ult-double-active .typingBox .focusCombo{
+ left:auto!important;
+ right:18px!important;
+ top:-112px!important;
+ transform:none!important;
+}
+
+/* v2.18.1 — same position, slightly larger to fill marked frame */
+.typingBox .focusCombo{
+ right:8px!important;
+ top:-122px!important;
+ min-width:168px!important;
+ padding:10px 18px!important;
+ gap:10px!important;
+ border-radius:14px!important;
+}
+.typingBox .focusCombo span{font-size:13px!important}
+.typingBox .focusCombo b{font-size:64px!important;line-height:.88!important}
+body.ult-double-active .typingBox .focusCombo{
+ right:8px!important;
+ top:-122px!important;
+}
+
+/* v2.18.1 — COMBO position only: 22px lower */
+.typingBox .focusCombo{
+ top:-100px!important;
+}
+body.ult-double-active .typingBox .focusCombo{
+ top:-100px!important;
+}

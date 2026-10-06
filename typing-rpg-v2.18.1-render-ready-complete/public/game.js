@@ -759,17 +759,6 @@ document.addEventListener('keydown',e=>{
  render=function(){__renderBeforePhase();__applySoloPhase()};
 
 window.__finishSolo=finishSolo;
-
- /* DEV TEST: F8 sets SOLO boss HP to 100 for quick result testing. */
- document.addEventListener("keydown",(e)=>{
-   if(e.key!=="F8" || mode!=="solo" || !playing || !state)return;
-   e.preventDefault();
-   state.bossHp=Math.min(state.bossHp,100);
-   render();
-   flash("🧪 TEST MODE：BOSS HP → 100","good");
- });
-
-
  function startCoop(){
    stopSolo();mode="coop";window.__soloMode=false;resultLocked=false; __soloPaused=false; document.body.classList.remove("solo-mode","solo-paused");
    q("bossName").textContent="☠ BOSS　深淵の魔王 アビス";
@@ -834,7 +823,7 @@ q("battleExitBtn").addEventListener("click",()=>{
 
 
 
-/* TYPE RAID 2.1.4 AUDIO — calm generated BGM + typing SE */
+/* TYPE RAID v2.18.2 AUDIO — calm generated BGM + typing SE */
 (()=>{
  let ctx=null, master=null, bgGain=null, seGain=null, bgTimer=null, bgStep=0;
  const AC=window.AudioContext||window.webkitAudioContext;
@@ -875,7 +864,6 @@ q("battleExitBtn").addEventListener("click",()=>{
    osc(1180,.018,.070,"square",seGain,.001,.001);
    osc(1780,.012,.030,"sine",seGain,.003,.001);
  };
- window.__v214MissSound=()=>{resume();osc(170,.11,.10,"sawtooth",seGain,0)};
  window.__v214StartBgm=startBgm;
  window.__v214StopBgm=stopBgm;
  window.__v214SetBgm=v=>{resume();if(bgGain)bgGain.gain.value=Math.max(0,Math.min(1,Number(v)))*.7};
@@ -884,7 +872,7 @@ q("battleExitBtn").addEventListener("click",()=>{
  document.addEventListener("keydown",resume,{once:true});
 })();
 
-/* v2.1.4 compatibility hooks */
+/* v2.18.2 audio compatibility hooks */
 try{
  const __oldKeySound=keySound;
  keySound=function(){ try{window.__v214KeySound?.()}catch(e){} };
@@ -898,7 +886,7 @@ try{
 document.addEventListener("click",()=>window.__v214StartBgm?.());
 
 
-/* TYPE RAID 2.1.9 — safe menu BGM add-on. Existing v2.1.8 battle audio is untouched. */
+/* TYPE RAID v2.18.2 — safe menu BGM add-on. */
 (()=>{
  let menuCtx=null, menuGain=null, menuTimer=null, step=0;
  const AC=window.AudioContext||window.webkitAudioContext;
